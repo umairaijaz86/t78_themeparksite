@@ -71,7 +71,15 @@ git will ask you to login to the repo, and clone everything for you
 > git push
   
   This will prevent any merge conflits and you will have the latest changes, run and check before pushing changes.
-
+  
+  !!When pushing for the first time, Git will ask you to setup the up stream and provide you with the command to use, 
+ 
+  the command will look like
+    
+  > git push --set--upstream origin _taskname_
+ 
+  this will create a corrosponding branch on the git repo and allow you to push to it
+ 
 ## When work is complete
   
   Once done with your end of the Task, we should create a pull request to develop
