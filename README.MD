@@ -1,6 +1,7 @@
 # Team 78, Tutor Group 9 
 Theme park website project
 
+
 ## Cloning the Repo
 
 Download a git client
@@ -20,28 +21,30 @@ git will ask you to login to the repo, and clone everything for you
   
   Main branch is for final consolidation and will remain empty till release.
 
-
 ### How to branch
   
 > git checkout develop
 > 
 > git pull
 > 
-> git checkout -b _sectionname_
+> git checkout -b _taskname_
 
-## Getting the latest work
+
+_note: for the branch names the taskname and section name are the same name, so when someone is working on the **index banner** the task name will be called **indexBanner** and the branch name will there for be **indexBanner**_
+
+## Getting the latest work (getting the latest changes)
 
 > git checkout develop
 > 
 > git pull
 > 
-> git checkout _sectionname_
+> git checkout _taskname_
 > 
 > git merge develop
 
   so you are always working on the latest changes that are pushed by the team
   
-## Committing
+## Committing changes (this does not sync online)
 
   When Commiting use the following as prefixes
 
@@ -59,6 +62,18 @@ git will ask you to login to the repo, and clone everything for you
   when you are done with your changes push.
 
 ## When pushing your changes
+
+**First time push**
+
+!! When pushing for the first time, Git will ask you to setup the up stream and provide you with the command to use, 
+ 
+  The To set    
+  
+  > git push --set--upstream origin _taskname_
+ 
+  this will create a corrosponding branch on the git repo and allow you to push to it
+
+**All other times**
   
 > git checkout develop
 > 
@@ -71,14 +86,6 @@ git will ask you to login to the repo, and clone everything for you
 > git push
   
   This will prevent any merge conflits and you will have the latest changes, run and check before pushing changes.
-  
-  !!When pushing for the first time, Git will ask you to setup the up stream and provide you with the command to use, 
- 
-  the command will look like
-    
-  > git push --set--upstream origin _taskname_
- 
-  this will create a corrosponding branch on the git repo and allow you to push to it
  
 ## When work is complete
   
