@@ -27,7 +27,7 @@ git will ask you to login to the repo, and clone everything for you
 > 
 > git pull
 > 
-> git checkout -b _yourname_
+> git checkout -b _sectionname_
 
 ## Getting the latest work
 
@@ -35,7 +35,7 @@ git will ask you to login to the repo, and clone everything for you
 > 
 > git pull
 > 
-> git checkout _yourname_
+> git checkout _sectionname_
 > 
 > git merge develop
 
@@ -49,7 +49,11 @@ git will ask you to login to the repo, and clone everything for you
 * Fix: when fixing an issue
 * Chore: for anything else (comments etc)
   
-  e.g. _Fet: Added a new section_
+  e.g. _Feat: Added a new section_
+  
+  e.g. _Fix: fixed a broken div_
+  
+  e.g. _Chore: added some html comments, removed unused attributes_
   
   commit often (use VS code it will help a lot)
   when you are done with your changes push.
@@ -60,7 +64,7 @@ git will ask you to login to the repo, and clone everything for you
 > 
 > git pull
 > 
-> git checkout _yourname_
+> git checkout _taskname_
 > 
 > git merge develop
 > 
