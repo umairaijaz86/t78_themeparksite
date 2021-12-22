@@ -14,7 +14,7 @@ Download a git client
 git will ask you to login to the repo, and clone everything for you
 
 
-# Repo Process
+# **Repo Process**
   
   When starting a task go to the project board 
 
