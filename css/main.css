@@ -1,3 +1,6 @@
+ /* Attractions page */
+
+ /* Ride Info */
  .ride_information .ride_description{
     width: 49%;
     text-align: left;
@@ -45,6 +48,7 @@
     
 }
 
+/* Live Show */
 #Live_Shows_info{
     background: rgb(230,230,230);
 }
@@ -58,9 +62,9 @@
 
 
 
-
+/* Resturants */
 #restaurants{
-    width=100%;
+    width:100%;
     text-align: center
 }
 
