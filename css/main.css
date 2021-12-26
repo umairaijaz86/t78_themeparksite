@@ -1,11 +1,26 @@
+ /* General */
+
+ body,html{
+     padding:0;
+     margin:0;
+ }
+
+.darkSection{
+    background: rgb(230,230,230);
+}
+
+section .padded {
+    padding:10px;
+}
+ /* Attractions page */
+
+ /* Ride Info */
  .ride_information .ride_description{
     width: 49%;
     text-align: left;
     display: inline-block;
     margin-bottom: 20px;
-    margin-top: 20px;
-    
-    
+    margin-top: 20px;   
 }
 
 
@@ -14,16 +29,10 @@
     width: 49%;
     display: inline-block;
     margin-bottom: 20px;
-    
-    
-    
-    
 }
 
 .ride_information .ride_data p{
-    padding: 0px 25% 0px    
-    
-    
+    padding: 0px 25% 0px       
 }
 
 
@@ -33,52 +42,32 @@
     width:150px;
     display: inline-block;
     margin-bottom: 40px;
-    
-    
-    
 }
 
 .ride_information .ride_description .ride_ticket p{
     color: white;
-    
-    
-    
 }
 
-#Live_Shows_info{
-    background: rgb(230,230,230);
-}
-
-
-    
-    
-    
-
-    
+/* Live Show */
 
 
 
-
+/* Resturants */
 #restaurants{
-    width=100%;
+    width:100%;
     text-align: center
 }
 
 #restaurants h1{
-
     text-align: center
 }
 
 #restaurants h2{
-
     text-align: center
 }
 
-#restaurants .restaurant_number{
-    
+#restaurants .restaurant{
     display: inline-block;
     margin: 2%;
     width: 18%;
-    
 }
-
