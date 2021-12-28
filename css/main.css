@@ -71,3 +71,43 @@ section .padded {
     margin: 2%;
     width: 18%;
 }
+
+/* Activities */
+#activities{
+    width:100%;
+    text-align: center
+}
+
+#activities h1{
+    text-align: center
+}
+
+#activities h2{
+    text-align: center
+}
+
+#activities .activity{
+    display: inline-block;
+    margin: 5%;
+    width: 15%;
+}
+
+/* WhatsNew */
+#WhatsNew{
+    width:100%;
+    text-align: center
+}
+
+#whatsnew h1{
+    text-align: center
+}
+
+#whatsnew h2{
+    text-align: center
+}
+
+#whatsnew .whatsnew{
+    display: inline-block;
+    margin: 4%;
+    width: 15%;
+}
