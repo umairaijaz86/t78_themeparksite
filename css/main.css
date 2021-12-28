@@ -1,0 +1,113 @@
+ /* General */
+
+ body,html{
+     padding:0;
+     margin:0;
+ }
+
+.darkSection{
+    background: rgb(230,230,230);
+}
+
+section .padded {
+    padding:10px;
+}
+ /* Attractions page */
+
+ /* Ride Info */
+ .ride_information .ride_description{
+    width: 49%;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;   
+}
+
+
+
+.ride_information .ride_data{
+    width: 49%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.ride_information .ride_data p{
+    padding: 0px 25% 0px       
+}
+
+
+.ride_information .ride_description .ride_ticket{
+    background: red;
+    text-align: center;
+    width:150px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.ride_information .ride_description .ride_ticket p{
+    color: white;
+}
+
+/* Live Show */
+
+
+
+/* Resturants */
+#restaurants{
+    width:100%;
+    text-align: center
+}
+
+#restaurants h1{
+    text-align: center
+}
+
+#restaurants h2{
+    text-align: center
+}
+
+#restaurants .restaurant{
+    display: inline-block;
+    margin: 2%;
+    width: 18%;
+}
+
+/* Activities */
+#activities{
+    width:100%;
+    text-align: center
+}
+
+#activities h1{
+    text-align: center
+}
+
+#activities h2{
+    text-align: center
+}
+
+#activities .activity{
+    display: inline-block;
+    margin: 5%;
+    width: 15%;
+}
+
+/* WhatsNew */
+#WhatsNew{
+    width:100%;
+    text-align: center
+}
+
+#whatsnew h1{
+    text-align: center
+}
+
+#whatsnew h2{
+    text-align: center
+}
+
+#whatsnew .whatsnew{
+    display: inline-block;
+    margin: 4%;
+    width: 15%;
+}
