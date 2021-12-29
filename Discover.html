@@ -46,23 +46,16 @@
             </nav>
         </header>
         <section id="map">
-            <div class="container">
 
-                <img src="images/parkmap.png" class="container" alt="Park map Image" >
-
-           
-
-              <button class="btn" onclick="location.href='https://goo.gl/maps/WSBFZ4BfVVT39HpC8'" target="_blank" > Get Directions </button>
-        
-              &nbsp;
-
-              <button class="btn" onclick= "location.href = 
-              'tel: 386-555-0111' "  >Call us </button>
-
-
+            <div class="container"> 
+                <figure>
+                    <img src="images/parkmap.png">
+                    <button class='btnClass1' type='button' onclick= 'window.open("https://goo.gl/maps/WSBFZ4BfVVT39HpC8");return false;' target="_blank" > Get Directions</button>
+                    <button class='btnClass2' type='button' onclick= "location.href = 
+                        'tel: 386-555-0111' "  >Call Us </button>
+                </figure>
             </div>
 
-    
         </section>
 
         <section id="timings">
@@ -174,7 +167,7 @@
                         <li>
                             <a href="Attractions.html">Attractions</a>
                             <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
+                            will scroll down to the relevant section that matches with the #id
                             <ul>
                                 <li><a href="Attractions.html#rides">Rides</a></li>
                                 <li><a href="Attractions.html#liveShows">Live Shows</a></li>
