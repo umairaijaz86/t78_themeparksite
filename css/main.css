@@ -24,7 +24,6 @@ section .padded {
 }
 
 
-
 .ride_information .ride_data{
     width: 49%;
     display: inline-block;
@@ -72,42 +71,75 @@ section .padded {
     width: 18%;
 }
 
-/* Activities */
-#activities{
-    width:100%;
-    text-align: center
+
+/*Discover Page. Park Map & Table for Schedule of the Park*/
+.container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
 }
 
-#activities h1{
-    text-align: center
+.container .btnClass1 {
+    position: absolute;
+    right: 16%;
+    top: 50%;
+    padding:0;
+    background: black;
+    border-color: royalblue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 24px;
+
 }
 
-#activities h2{
-    text-align: center
+.container .btnClass2 {
+    position: absolute;
+    background-color: #555;
+    top: 60%;
+    right: 18%;
+    background: black;
+    border-color: royalblue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 24px;
+    
 }
 
-#activities .activity{
-    display: inline-block;
-    margin: 5%;
-    width: 15%;
+.container img {
+    width: 90%;
+    height:  auto;
+
 }
 
-/* WhatsNew */
-#WhatsNew{
-    width:100%;
-    text-align: center
+.btnClass1:hover {
+    background: white;
+    color: black;
+
+}
+.btnClass2:hover {
+    background: white;
+    color: black;
+
 }
 
-#whatsnew h1{
-    text-align: center
+table{
+    width: 80%;
 }
 
-#whatsnew h2{
-    text-align: center
+td {
+    border: 1px solid #333;
+    font-size: 16px;
 }
 
-#whatsnew .whatsnew{
-    display: inline-block;
-    margin: 4%;
-    width: 15%;
+thead,tfoot {
+    background: black;
+    color: white;
+    font-size: 24px;
 }
+
+/*//////*/
+
