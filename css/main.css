@@ -27,7 +27,6 @@ section .padded {
 }
 
 
-
 .ride_information .ride_data{
     width: 49%;
     display: inline-block;
@@ -74,3 +73,76 @@ section .padded {
     margin: 2%;
     width: 18%;
 }
+
+
+/*Discover Page. Park Map & Table for Schedule of the Park*/
+.container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.container .btnClass1 {
+    position: absolute;
+    right: 16%;
+    top: 50%;
+    padding:0;
+    background: black;
+    border-color: royalblue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 24px;
+
+}
+
+.container .btnClass2 {
+    position: absolute;
+    background-color: #555;
+    top: 60%;
+    right: 18%;
+    background: black;
+    border-color: royalblue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 24px;
+    
+}
+
+.container img {
+    width: 90%;
+    height:  auto;
+
+}
+
+.btnClass1:hover {
+    background: white;
+    color: black;
+
+}
+.btnClass2:hover {
+    background: white;
+    color: black;
+
+}
+
+table{
+    width: 80%;
+}
+
+td {
+    border: 1px solid #333;
+    font-size: 16px;
+}
+
+thead,tfoot {
+    background: black;
+    color: white;
+    font-size: 24px;
+}
+
+/*//////*/
+
