@@ -8,6 +8,9 @@
 .darkSection{
     background: rgb(230,230,230);
 }
+section {
+    padding: 10px 0;
+}
 
 section .padded {
     padding:10px;

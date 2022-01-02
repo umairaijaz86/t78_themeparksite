@@ -48,15 +48,60 @@
             </nav>
         </header>
         <section id="mainBanner" class="topBanner">
-            <div id="mainBanner">
-                <div class="ride_one">
+           
                     <div class="banner">
                         <img src="images/TopBanner.png" alt = "banner" width = "100%">
                     </div>
-
+             
         </section>
         <section id="ticketSearch">
-
+            
+                <center>
+                    <h1>Park Tickets and Offers</h1>
+                </center>
+                <div id="ticketsControl">                   
+                    <div id="tc_header">
+                        <ul>
+                            <li>Hotels</li>
+                            <li>Rides</li>
+                            <li>Deals</li>
+                        </ul>
+                    </div> 
+                    <div id="tc_main">
+                        <form action="" target="_blank" method="post">
+                            <div>
+                                <select name="type" id="type">
+                                    <option value="Hotels">Hotels</option>
+                                    <option value="Rides">Rides</option>
+                                    <option value="Deals">Deals</option>
+                                </select>
+                            </div>
+                            <div><input type="text" placeholder="Arrival" name="Arrival" id="arrival" required onfocus="(this.type='date')"
+                                onblur="(this.type='text')"></div>
+                            <div><input type="text" placeholder="Departure" name="Departure" id="departure" required onfocus="(this.type='date')"
+                                onblur="(this.type='text')"></div>
+                            <div>
+                                <select name="Persons" id="persons">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="10+">10+</option>
+                                    <option value="-1" Disabled selected>Persson</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="submit" value="Book">
+                            </div>
+                        </form>
+                    </div>
+                </div>
         </section>
         <section id="activities">
            <div id="activityList" class="padded">
