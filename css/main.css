@@ -1,39 +1,39 @@
  /* General */
 
  body,html{
-   padding:0;
-   margin:0;
+  padding:0;
+  margin:0;
 }
 
 
 a,a:visited {color: #fff; text-decoration:none;font-style: normal;}
 
 .darkSection{
-  background: rgb(230,230,230);
+ background: rgb(230,230,230);
 }
 
 h1 {
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 36px;
-   line-height: 42px;
-   align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  align-items: center;
 }
 
 section {
-  padding: 10px 0;
-  /* display: flex; */
+ padding: 10px 0;
+ /* display: flex; */
 }
 
 section .padded {
-  padding:10px;
+ padding:10px;
 }
 
 section.topBanner {
-  
+ 
 padding-top: 0px;
-  
+ 
 z-index: 10;
 }
 
@@ -41,227 +41,230 @@ z-index: 10;
 
 
 header {
-   background: #ffffffbd;
-   display: flex;
-   width: 90vw;
-   -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
-   box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
-   z-index: 100000;
-   position: fixed;
-   padding: 0 5vw;
-   text-align: left;
- }
- header nav {
-   width: 100%;
-   grid-template-columns: 0 auto;
-   margin: auto;
-   /* position: relative; */
-   /* left: 0; */
-   /* right: 0; */
-   display: grid;
-   text-align: left;
- }
- header #logo {
-   grid-column: 1/1;
-   padding: 10px 20px;
- }
- 
- header nav > ul {
-   grid-column: 1/3;
- }
- 
- header nav > ul  li {
-   list-style: none;
- }
- header nav > ul li:last-child
- {
-   border-bottom:none;
- }
- header nav > ul  li a{
-   color:#000 !important;
-   text-decoration: none;
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: normal;
-   line-height: 14px;
-   display: flex;
-   align-items: center;
-   text-align: center;
- }
+  background: #ffffffbd;
+  display: flex;
+  width: 90vw;
+  -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
+  box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
+  z-index: 100000;
+  position: fixed;
+  padding: 0 5vw;
+  text-align: left;
+}
+header nav {
+  width: 100%;
+  grid-template-columns: 0 auto;
+  margin: auto;
+  /* position: relative; */
+  /* left: 0; */
+  /* right: 0; */
+  display: grid;
+  text-align: left;
+}
+header #logo {
+  grid-column: 1/1;
+  padding: 10px 20px;
+}
 
- header nav ul ul{
-   display:none;
-   position: absolute;
-   background: #ffffff;
-   padding: 10px;
-   left: 0;
- }
- header nav > ul > li {
-   list-style: none;
-   float: left;
-   padding: 20px;
-   position: relative;
- }
- 
- header nav > ul > li:hover ul{
-   display:block;
- }
- header nav > ul > li ul
- {
-   padding: 0 10px;
-   margin-top:10px;
-   width: 100px;
-   -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
-   box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
- }
- header nav > ul > li ul > li {
-   padding:10px;
-   border-bottom:1px solid #c3c3c3;
- }
+header nav > ul {
+  grid-column: 1/3;
+}
+
+header nav > ul  li {
+  list-style: none;
+}
+header nav > ul li:last-child
+{
+  border-bottom:none;
+}
+header nav > ul  li a{
+  color:#000 !important;
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+header nav ul ul{
+  display:none;
+  position: absolute;
+  background: #ffffff;
+  padding: 10px;
+  left: 0;
+}
+header nav > ul > li {
+  list-style: none;
+  float: left;
+  padding: 20px;
+  position: relative;
+}
+
+header nav > ul > li:hover ul{
+  display:block;
+}
+header nav > ul > li ul
+{
+  padding: 0 10px;
+  margin-top:10px;
+  width: 100px;
+  -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
+  box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
+}
+header nav > ul > li ul > li {
+  padding:10px;
+  border-bottom:1px solid #c3c3c3;
+}
 
 /* Index page*/
 
 #ticketsControl {
-   margin: 0 23vw;
-   background: #f5f2f2;
-   padding: 15px;
+  margin: 0 23vw;
+  background: #f5f2f2;
+  padding: 15px;
 }
 
 #tc_header {
-   width: 100%;
-   height: 30px;
-   padding: 0 0 15px;
-   border-bottom: 2px solid #000;
+  width: 100%;
+  height: 30px;
+  padding: 0 0 15px;
+  border-bottom: 2px solid #000;
 }
 
 #tc_main {
-   padding-top: 13px;
-   display: flex;
+  padding-top: 13px;
+  display: flex;
 }
 
 
 #tc_main form {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    display: flex;
-    flex-wrap: wrap;
-    /* column-gap: 0; */
-    vertical-align: top;
-    align-items: self-start;
-    justify-content: space-between;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   display: flex;
+   flex-wrap: wrap;
+   /* column-gap: 0; */
+   vertical-align: top;
+   align-items: self-start;
+   justify-content: space-between;
 }
 #tc_header ul  {
-   list-style: none;
-   flex-wrap: wrap;
-   flex-basis: fit-content;
-   flex-wrap: wrap;
-   column-gap: 80px;
-   padding: 0;
-   width: 420px;
-   margin: auto;
-   position: relative;
-   float: none;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-basis: fit-content;
+  flex-wrap: wrap;
+  column-gap: 80px;
+  padding: 0;
+  width: 420px;
+  margin: auto;
+  position: relative;
+  float: none;
 }
 
 #tc_header ul > li {
-   float: left;
-   list-style: none;
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 22px;
-   line-height: 28px;
-   text-align: center;
-   text-transform: uppercase;
-   padding: 0 30px;
-   border-right: 2px solid #000;
+  float: left;
+  list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 30px;
+  border-right: 2px solid #000;
 }
 
 #tc_header ul > li:last-child
 {
-  border-right:none;
+ border-right:none;
 }
 
 
 .activity {
-   width: 33.33%;
-   float: left;
-   font-family: Roboto;
-   font-style: normal;
+  width: 30%;
+  float: left;
+  font-family: Roboto;
+  font-style: normal;
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 0 0.5%;
 }
 
 .activity > .img {
-   width: 100%;
-   height: 350px;
-   background-size: cover;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
 }
 
 .activity h3{
-   font-weight: bold;
-   font-size: 24px;
-   line-height: 28px;
-   align-items: center;
-   /* padding: 0 !important; */
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  align-items: center;
+  /* padding: 0 !important; */
 }
 
 .activity p{
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 400;
-   font-size: 14px;
-   line-height: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .activity .ride_data ul{
-   list-style: none;
-   padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .activity > h3, .activity p, .activity .ride_data{
-  padding:0 10px;
+ padding:0 10px;
 }
 
 #activityList {
-   margin: 10px 10vw;
-   position: relative;
-   display: inline-block;
-   border: 1px solid;
+  margin: 10px 10vw;
+  position: relative;
+  display: inline-block;
+  /* border: 1px solid; */
 }
 
 /* Attractions page */
 
 /* Ride Info */
 .ride_information .ride_description{
-  width: 49%;
-  text-align: left;
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-top: 20px;   
+ width: 49%;
+ text-align: left;
+ display: inline-block;
+ margin-bottom: 20px;
+ margin-top: 20px;   
 }
 
 
 .ride_information .ride_data{
-  width: 49%;
-  display: inline-block;
-  margin-bottom: 20px;
+ width: 49%;
+ display: inline-block;
+ margin-bottom: 20px;
 }
 
 .ride_information .ride_data p{
-  padding: 0px 25% 0px       
+ padding: 0px 25% 0px       
 }
 
 
 .ride_information .ride_description .ride_ticket{
-  background: red;
-  text-align: center;
-  width:150px;
-  display: inline-block;
-  margin-bottom: 40px;
+ background: red;
+ text-align: center;
+ width:150px;
+ display: inline-block;
+ margin-bottom: 40px;
 }
 
 .ride_information .ride_description .ride_ticket p{
-  color: white;
+ color: white;
 }
 
 /* Live Show */
@@ -270,92 +273,92 @@ header {
 
 /* Resturants */
 #restaurants{
-  width:100%;
-  text-align: center
+ width:100%;
+ text-align: center
 }
 
 #restaurants h1{
-  text-align: center
+ text-align: center
 }
 
 #restaurants h2{
-  text-align: center
+ text-align: center
 }
 
 #restaurants .restaurant{
-  display: inline-block;
-  margin: 2%;
-  width: 18%;
+ display: inline-block;
+ margin: 2%;
+ width: 18%;
 }
 
 
 /*Discover Page. Park Map & Table for Schedule of the Park*/
 .container {
-  position: relative;
-  max-width: 100%;
-  height: auto;
+ position: relative;
+ max-width: 100%;
+ height: auto;
 }
 
 .container .btnClass1 {
-  position: absolute;
-  right: 16%;
-  top: 50%;
-  padding:0;
-  background: black;
-  border-color: royalblue;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 10px 24px;
+ position: absolute;
+ right: 16%;
+ top: 50%;
+ padding:0;
+ background: black;
+ border-color: royalblue;
+ border-radius: 5px;
+ color: white;
+ cursor: pointer;
+ font-size: 18px;
+ padding: 10px 24px;
 
 }
 
 .container .btnClass2 {
-  position: absolute;
-  background-color: #555;
-  top: 60%;
-  right: 18%;
-  background: black;
-  border-color: royalblue;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 10px 24px;
-  
+ position: absolute;
+ background-color: #555;
+ top: 60%;
+ right: 18%;
+ background: black;
+ border-color: royalblue;
+ border-radius: 5px;
+ color: white;
+ cursor: pointer;
+ font-size: 18px;
+ padding: 10px 24px;
+ 
 }
 
 .container img {
-  width: 90%;
-  height:  auto;
+ width: 90%;
+ height:  auto;
 
 }
 
 .btnClass1:hover {
-  background: white;
-  color: black;
+ background: white;
+ color: black;
 
 }
 .btnClass2:hover {
-  background: white;
-  color: black;
+ background: white;
+ color: black;
 
 }
 
 table{
-  width: 80%;
+ width: 80%;
 }
 
 td {
-  border: 1px solid #333;
-  font-size: 16px;
+ border: 1px solid #333;
+ font-size: 16px;
 }
 
 thead,tfoot {
-  background: black;
-  color: white;
-  font-size: 24px;
+ background: black;
+ color: white;
+ font-size: 24px;
 }
 
 /*//////*/
@@ -363,30 +366,30 @@ thead,tfoot {
 
 /* Footer */
 footer {
-   background: #000;
-   padding: 30px 6vw 0;
-   display: flex;
-   flex-wrap: wrap;
-   vertical-align: top;
-   align-items: self-start;
-   justify-content: space-between;
+  background: #000;
+  padding: 30px 6vw 0;
+  display: flex;
+  flex-wrap: wrap;
+  vertical-align: top;
+  align-items: self-start;
+  justify-content: space-between;
 }
 
 footer *{
-  color:#fff;
-  padding-top: 0;
-  margin-top: 0;
-  font-style: normal;
-  font-family: Roboto;
+ color:#fff;
+ padding-top: 0;
+ margin-top: 0;
+ font-style: normal;
+ font-family: Roboto;
 }
 
 footer > div {
-    width: 20vw;
+   width: 20vw;
 }
 
 footer #navigation nav > ul {
-   padding: 0;
-   list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 footer #helpCenter {
@@ -398,52 +401,52 @@ footer #contactUs{
 }
 
 footer #copyrights {
-  width:100%;
-  flex-basis: 100%;
-  color: #fff;
+ width:100%;
+ flex-basis: 100%;
+ color: #fff;
 }
 
 ul#socialMediaLinks {
-    /* display: grid; */
-    padding: 0;
+   /* display: grid; */
+   padding: 0;
 }
 
 ul#socialMediaLinks li{
-  float:left;
-  width: auto;
-  list-style: none;
-  float: left;
-  padding: 0px 5px;
-  position: relative;
+ float:left;
+ width: auto;
+ list-style: none;
+ float: left;
+ padding: 0px 5px;
+ position: relative;
 }
 
 input[type="text"], input[type="email"],textarea {
-    padding: 10px;
-    width: 95%;
+   padding: 10px;
+   width: 95%;
 }
 input[type="date"]{
-  padding: 8px;
-  width: 100%;
-  border: 1px solid #767676;
-  border-radius: 0;
+ padding: 8px;
+ width: 100%;
+ border: 1px solid #767676;
+ border-radius: 0;
 }
 
 Select{
-  width:200px;
-  padding:10px;
+ width:200px;
+ padding:10px;
 }
 
 input[type="submit"]
 {
-  background: #d80000;
-  border:1px solid;
-  padding: 10px 30px;
-  color:#fff;
-  font-family: Roboto;
+ background: #d80000;
+ border:1px solid;
+ padding: 10px 30px;
+ color:#fff;
+ font-family: Roboto;
 }
 
 input[type="submit"]:hover
 {
-   background:#fff;
-   color:#000;
+  background:#fff;
+  color:#000;
 }
