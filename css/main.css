@@ -510,20 +510,30 @@ transform:scale(1.1);
 }
 
 table{
- width: 80%;
+ width: 100%;
+ margin-top: 15px;
+ border-collapse: collapse;
 }
 
 td {
- border: 1px solid #333;
+ /* border: 1px solid #333; */
  font-size: 16px;
+ padding: 20px 0;
 }
 
 thead,tfoot {
- background: black;
- color: white;
+ /* background: black; */
+ color: black;
  font-size: 24px;
+ padding: 20px;
+ height: 42px;
+ border-bottom: 2px solid #000;
 }
-
+thead > tr {
+ border-bottom: 1px solid #000 !important;
+ text-align: left;
+ text-transform: uppercase;
+}
 /*//////*/
 
 
@@ -663,4 +673,34 @@ section#parkMap {
 
 section#timings {
     margin-bottom: 60px;
+}
+
+th {
+    font-size: 15px;
+}
+
+div#hotels {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: fit-content;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    padding: 0 20px;
+}
+
+.hotel {flex-grow: 1;text-align: center;}
+
+.hotelImage {
+    background: #979797;
+    min-height: 42vh;
+    width: 100%;
+}
+
+.hotel input[type="submit"] {
+    width: 100%;
+    border-radius: 0;
+    padding: 12px;
+    font-size: 26px;
+    margin-top: 20px;
 }
