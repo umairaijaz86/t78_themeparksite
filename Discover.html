@@ -45,66 +45,78 @@
                 </ul>
             </nav>
         </header>
-        <section id="map">
-            <div class="container"> 
-                <figure>
-                    <img src="images/parkmap.png">
-                    <button class='btnClass1' type='button' onclick= 'window.open("https://goo.gl/maps/WSBFZ4BfVVT39HpC8");return false;' target="_blank" > Get Directions</button>
-                    <button class='btnClass2' type='button' onclick= "location.href = 
-                        'tel: 386-555-0111' "  >Call Us </button>
-                </figure>
+        <section id="map" class="topBanner">
+            <div class="banner" style="background-image: url('images/ParkLocation.png');"> 
+                <address>                    
+                    <div class="address">
+                        <h3>Park Directions</h3>
+                        <p>
+                            78 Creek Ave. <br/>
+                            Key West, FL 33040
+                        </p>
+                    </div>
+                    <a href="https://goo.gl/maps/WSBFZ4BfVVT39HpC8" target="_blank"> Get Directions</button>
+                    <a href="tel:3865550111">Call Us </a>
+                </address>
             </div>
         </section>
 
         <section id="timings">
-
-            <h2>Park Timings</h2>
-            <table>
-                 <thead>
-                     <tr>
-                        <th colspan="1">Days</th>
-                        <th colspan="1">Opening Hours</th>
-                        <th colspan="1">Closing Hours</th>
-                    </tr>
-                 </thead>
-                 <tbody>
-                     <tr>
-                         <td>MONDAY - THURSDAY</td>
-                         <td>8 AM</td>
-                         <td>7 PM</td>
-                    </tr>
-                     <tr>
-                      <td>FRIDAY - SUNDAY</td>
-                     <td> 8 AM </td>
-                     <td>9 PM</td>
-                     </tr> 
-                 </tbody>
-            </table>
-
-            &nbsp;
-             <h2>Live-Shows Timings</h2>
-             <table>
-                 <thead>
-                     <tr>
-                        <th colspan="1">Days</th>
-                        <th colspan="1">Opening Hours</th>
-                        <th colspan="1">Closing Hours</th>
-                    </tr>
-                 </thead>
-                 <tbody>
-                     <tr>
-                         <td>MONDAY - THURSDAY</td>
-                         <td>12 PM</td>
-                         <td>4 PM</td>
-                    </tr>
-                     <tr>
-                      <td>FRIDAY - SUNDAY</td>
-                     <td> 12 PM </td>
-                     <td>6 PM</td>
-                     </tr> 
-                 </tbody>
-            </table>
-
+            
+            <div id="parkTimings" class="padded boxed">
+                <h1>Park Timings</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="1">Days</th>
+                            <th colspan="1">Opening Hours</th>
+                            <th colspan="1">Closing Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MONDAY - THURSDAY</td>
+                            <td>8 AM</td>
+                            <td>7 PM</td>
+                        </tr>
+                        <tr>
+                        <td>FRIDAY - SUNDAY</td>
+                        <td> 8 AM </td>
+                        <td>9 PM</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <div id="liveShowTimings" class="padded boxed">
+                <h1>Live-Shows Timings</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="1">Days</th>
+                            <th colspan="1">Opening Hours</th>
+                            <th colspan="1">Closing Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MONDAY - THURSDAY</td>
+                            <td>12 PM</td>
+                            <td>4 PM</td>
+                        </tr>
+                        <tr>
+                        <td>FRIDAY - SUNDAY</td>
+                        <td> 12 PM </td>
+                        <td>6 PM</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
 
         </section>
         
@@ -117,10 +129,10 @@
         <section id="hotels" class="darkSection">
             <center>
                 <h1>Hotels</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                </p>
             </center>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            </p>
             <div id="hotels">
                 <div class="hotel">
                     <div class="hotelImage">
@@ -161,52 +173,43 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-            <div id="giftShops">
-                <div class="giftshop small">
+            <div id="giftShops" class="padded">
+                <div class="giftshop small" style="background-image:url('images/smallgiftshop.png')">
                     <div class="giftShopText">
-                        <p>
+                        <h3>
                             Some Text
-                        </p>
+                        </h3>
                     </div>
-                    <img src="images/smallgiftshop.png" />
                 </div>
                 <!--- Copy this -->
-                <div id="giftShops">
-                    <div class="giftshop small">
-                        <div class="giftShopText">
-                            <p>
-                                Some Text
-                            </p>
-                        </div>
-                        <img src="images/smallgiftshop.png" />
+                <div class="giftshop small" style="background-image:url('images/smallgiftshop.png')">
+                    <div class="giftShopText">
+                        <h3>
+                            Some Text
+                        </h3>
                     </div>
-                    <div id="giftShops">
-                        <div class="giftshop small">
-                            <div class="giftShopText">
-                                <p>
-                                    Some Text
-                                </p>
-                            </div>
-                            <img src="images/smallgiftshop.png" />
-                        </div>
-                        <div id="giftShops">
-                            <div class="giftshop small">
-                                <div class="giftShopText">
-                                    <p>
-                                        Some Text
-                                    </p>
-                                </div>
-                                <img src="images/smallgiftshop.png" />
-                            </div>
-                            <div id="giftShops">
-                                <div class="giftshop center">
-                                    <div class="giftShopText">
-                                        <p>
-                                            Some Text
-                                        </p>
-                                    </div>
-                                    <img src="images/Centergiftshop.png" />
-                                </div>
+                </div>
+                <div class="giftshop center"  style="background-image:url('images/Centergiftshop.png')">
+                    <div class="giftShopText">
+                        <h3>
+                            Some Text
+                        </h3>
+                    </div>
+                </div>
+                <div class="giftshop small" style="background-image:url('images/Centergiftshop.png')">
+                    <div class="giftShopText">
+                        <h3>
+                            Some Text
+                        </h3>
+                    </div>
+                </div>
+                <div class="giftshop small" style="background-image:url('images/Centergiftshop.png')">
+                    <div class="giftShopText">
+                        <h3>
+                            Some Text
+                        </h3>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
@@ -216,8 +219,8 @@
                         <img src="images/header/logo.png" alt="Theme park logo">
                     </a>
                 </div>
-                <div id="#socialMedia">
-                    <ul id="#socialMediaLinks">
+                <div id="socialMedia">
+                    <ul id="socialMediaLinks">
                         <li>
                             <a href="https://facebook.comc">
                                 <img src="images/footer/facebook.png" 
@@ -255,26 +258,26 @@
                     <ul>
                         <li><a href="Index.html">Home</a></li>
                         <li>
-                            <a href="Attractions.html">Attractions</a>
-                            <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id
-                            <ul>
-                                <li><a href="Attractions.html#rides">Rides</a></li>
-                                <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                                <li><a href="Attractions.html#resturants">Resturants</a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <!-- the # href link is to prevent redirects since its the same page-->
-                            <a href="#">Discover</a>
+                            <a href="#">Attractions</a>
                             <!-- Since its the same page , we dont need to redirect
                         the relative internal links will work with a # href -->
                             <ul>
-                                <li><a href="#map">Directions</a></li>
-                                <li><a href="#tmings">Schedule</a></li>
-                                <li><a href="#parkMap">Park Map</a></li>
-                                <li><a href="#hotels">Hotels</a></li>
-                                <li><a href="#giftShop">Gift Shop</a></li>
+                                <li><a href="#rides">Rides</a></li>
+                                <li><a href="#liveShows">Live Shows</a></li>
+                                <li><a href="#resturants">Resturants</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Discover.html">Discover</a>
+                            <!-- relative links on different page 
+                            will scroll down to the relevant section that matches with the #id-->
+                            <ul>
+                                <li><a href="Discover.html#map">Directions</a></li>
+                                <li><a href="Discover.html#tmings">Schedule</a></li>
+                                <li><a href="Discover.html#parkMap">Park Map</a></li>
+                                <li><a href="Discover.html#hotels">Hotels</a></li>
+                                <li><a href="Discover.html#giftShop">Gift Shop</a></li>
                             </ul>
                         </li>
                     </ul>

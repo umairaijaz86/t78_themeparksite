@@ -1,18 +1,17 @@
  /* General */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap'); */
 
- body,html{
+body,html{
   padding:0;
   margin:0;
-  font-family: Roboto !important;
+  font-family: Roboto, sans-serif;
   font-style: normal;
 }
 
 
+
 a,a:visited {color: #fff; text-decoration:none;}
 
-.darkSection{
- background: rgb(230,230,230);
-}
 
 h1 {  
   font-weight: bold;
@@ -28,6 +27,15 @@ section {
  padding: 10px 0;
 }
 
+.darkSection{
+  background: #f9f8f8;
+}
+
+.boxed {
+   width: 60vw;
+   margin: auto;
+}
+
 section .padded {
  padding:10px;
 }
@@ -37,9 +45,51 @@ section.topBanner {
   z-index: 10;
 }
 
+
+input[type="text"], input[type="email"],textarea {
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid #767676;
+}
+
+input[type="date"]{
+padding: 8px;
+width: 100%;
+border: 1px solid #767676;
+border-radius: 0;
+}
+
+Select{
+width:200px;
+padding:10px;
+border-radius: 5px;
+}
+
+input[type="submit"]
+{
+background: #d80000;
+border:1px solid;
+padding: 10px 30px;
+color:#fff;
+border-radius: 5px;
+}
+
+input[type="submit"]:hover
+{
+ background:#fff;
+ color:#000;
+}
+
 /* Menu */
+
+#logo img {
+  height: 60px;
+}
+
+
 header {
-  background: #ffffffbd;
+  background: #ffffff;
   display: flex;
   width: 90vw;
   -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
@@ -48,6 +98,7 @@ header {
   position: fixed;
   padding: 0 5vw;
   text-align: left;
+  top: 0;
 }
 
 header nav {
@@ -118,12 +169,21 @@ header nav > ul > li ul > li {
   border-bottom:1px solid #c3c3c3;
 }
 
+
+.topBanner .banner {
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
 /* Index page*/
 
 #ticketsControl {
   margin: 0 23vw;
   background: #f5f2f2;
   padding: 15px;
+  border-radius: 15px;
 }
 
 #tc_header {
@@ -137,7 +197,6 @@ header nav > ul > li ul > li {
   padding-top: 13px;
   display: flex;
 }
-
 
 #tc_main form {
    width: 100%;
@@ -175,8 +234,7 @@ header nav > ul > li ul > li {
   border-right: 2px solid #000;
 }
 
-#tc_header ul > li:last-child
-{
+#tc_header ul > li:last-child{
  border-right:none;
 }
 
@@ -184,11 +242,16 @@ header nav > ul > li ul > li {
 .activity {
   width: 30%;
   float: left;
-  
-  
-  border: 1px solid #000;
   padding: 10px;
   margin: 0 0.5%;
+  -webkit-box-shadow: 2px 6px 15px -3px rgba(0,0,0,0.51);
+  box-shadow: 2px 6px 15px -3px rgba(0,0,0,0.51);
+  transition-property: transform;
+  transition-duration:500ms;
+}
+
+.activity:hover {
+  transform:scale(1.05);
 }
 
 .activity > .img {
@@ -205,8 +268,6 @@ header nav > ul > li ul > li {
 }
 
 .activity p{
-  
-  
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -216,7 +277,9 @@ header nav > ul > li ul > li {
   list-style: none;
   padding: 0;
 }
-
+.activity > h3, .activity p {
+  text-align:center;
+}
 .activity > h3, .activity p, .activity .ride_data{
  padding:0 10px;
 }
@@ -228,43 +291,127 @@ header nav > ul > li ul > li {
   /* border: 1px solid; */
 }
 
+
+
+div#whatsnewList {display: flex;column-gap: 2%;padding: 50px;}
+
+#whatsnewList > .whatsnew > .img {
+   width: 100% !important;
+   height: 40vh !important;
+   background-size: cover !important;
+}
+
+
+.whatsNewText {
+  background: #f1f1f1;
+  color: #000;
+  padding: 20px;
+  text-align: justify;
+  /* -webkit-box-shadow: 2px 6px 15px -3px rgb(0 0 0 / 51%); */
+  /* box-shadow: 2px 6px 15px -3px rgb(0 0 0 / 51%); */
+  transition-property: transform;
+}
+
+.whatsNewText h3 {
+  margin-top: 0;
+  /* text-align: center; */
+}
+
 /* Attractions page */
 
 /* Ride Info */
+
+
+.rideBanner.banner {
+  min-height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+
+.ride_information.padded {
+  display: flex;
+  column-gap: 21vw;
+  width: auto;
+  justify-content: center;
+  padding: 1vw 5vw !important;
+  flex-wrap:wrap;
+}
+
+.ride_information > h1 {
+  width:100%;
+}
+.ride_information > *:not(h1)
+{
+  flex:1;
+}
+
 .ride_information .ride_description{
  width: 49%;
  text-align: left;
  display: inline-block;
- margin-bottom: 20px;
- margin-top: 20px;   
 }
 
+.ride_information .ride_description .ride_ticket{
+  background: #d80000;
+  text-align: center;
+  width:150px;
+  display: inline-block;
+  margin-bottom: 40px;
+ }
+ 
+ .ride_information .ride_description .ride_ticket p{
+  color: white;
+ }
 
 .ride_information .ride_data{
  width: 49%;
  display: inline-block;
- margin-bottom: 20px;
 }
 
 .ride_information .ride_data p{
  padding: 0px 25% 0px       
 }
-
-
-.ride_information .ride_description .ride_ticket{
- background: red;
- text-align: center;
- width:150px;
- display: inline-block;
- margin-bottom: 40px;
+.ride_information .ride_data ul {
+  list-style: none;
+  padding: 0;
 }
 
-.ride_information .ride_description .ride_ticket p{
- color: white;
+.ride_information .ride_data ul li {
+  margin-bottom:20px
 }
+
 
 /* Live Show */
 
+#live_shows_info .liveshowItem {
+  display: flex;
+  justify-content: inherit;
+  column-gap: 40px;
+  margin: 60px 0;
+  /* flex-grow: 1; */
+}
+
+#live_shows_info > .liveshowItem:nth-child(odd)
+{flex-direction: row-reverse;}
+
+.Live_Show_image {
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.Live_Show_text {
+    flex-grow: 1;
+    padding: 0 30px;
+}
+.Live_Show_text > h2 {
+    margin-top:0
+}
 
 
 /* Resturants */
@@ -288,58 +435,53 @@ header nav > ul > li ul > li {
 }
 
 
-/*Discover Page. Park Map & Table for Schedule of the Park*/
-.container {
- position: relative;
- max-width: 100%;
- height: auto;
+.restaurantImage {
+  height: 290px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform:scale(1);
+  transition-duration: 500ms;
+  transition-property: transform;
 }
 
-.container .btnClass1 {
- position: absolute;
- right: 16%;
- top: 50%;
- padding:0;
- background: black;
- border-color: royalblue;
- border-radius: 5px;
- color: white;
- cursor: pointer;
- font-size: 18px;
- padding: 10px 24px;
-
-}
-
-.container .btnClass2 {
- position: absolute;
- background-color: #555;
- top: 60%;
- right: 18%;
- background: black;
- border-color: royalblue;
- border-radius: 5px;
- color: white;
- cursor: pointer;
- font-size: 18px;
- padding: 10px 24px;
+.restaurantImage:hover {
+transform:scale(1.1);
+-webkit-box-shadow: 0px 7px 4px 0px rgb(0 0 0 / 18%);
+  box-shadow: 0px 7px 4px 0px rgb(0 0 0 / 18%);
  
 }
 
-.container img {
- width: 90%;
- height:  auto;
+/*Discover Page. Park Map & Table for Schedule of the Park*/
 
+
+#map .banner {
+  position: relative;
 }
 
-.btnClass1:hover {
- background: white;
- color: black;
-
+#map address {
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+  /* padding: 20px 20px 40px; */
+  background: #0006;
+  color: #fff;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  max-width: 18vw;
+  align-items: center;
+  column-gap: 20px;
+  padding: 20px;
 }
-.btnClass2:hover {
- background: white;
- color: black;
 
+#map a {background: #f44336;padding: 10px 20px;/* margin: auto 10px 10px; */flex: 1;text-align:center;}
+#map a:hover {background: #ff5722;}
+#map .address {
+  margin-bottom: 0px;
+  width: 100%;
 }
 
 table{
@@ -362,13 +504,14 @@ thead,tfoot {
 
 /* Footer */
 footer {
-  background: #000;
+  background: #161616;
   padding: 30px 6vw 0;
   display: flex;
   flex-wrap: wrap;
   vertical-align: top;
   align-items: self-start;
   justify-content: space-between;
+  margin-top: 60px;
 }
 
 footer *{
@@ -380,20 +523,34 @@ footer *{
 }
 
 footer > div {
-   width: 20vw;
+   min-width: 20vw;
 }
 
 footer #navigation nav > ul {
   padding: 0;
   list-style: none;
 }
-
+footer #navigation nav > ul > li {
+  margin-bottom:20px
+}
 footer #helpCenter {
 
 }
 
 footer #contactUs{
 
+}
+
+footer form input:not([type="submit"]), footer form textarea {
+  width: -webkit-fill-available;  
+  border-radius: 0;
+  background:#313131;
+}
+
+footer form input[type="submit"]
+{
+  border-radius:0;
+  border:none !important
 }
 
 footer #copyrights {
@@ -416,32 +573,61 @@ ul#socialMediaLinks li{
  position: relative;
 }
 
-input[type="text"], input[type="email"],textarea {
-   padding: 10px;
-   width: 95%;
-}
-input[type="date"]{
- padding: 8px;
- width: 100%;
- border: 1px solid #767676;
- border-radius: 0;
+
+
+footer .logo img {
+    height: auto;
+    width: 150px;
 }
 
-Select{
- width:200px;
- padding:10px;
+
+
+form#contactForm {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+    row-gap: 6px;
 }
 
-input[type="submit"]
-{
- background: #d80000;
- border:1px solid;
- padding: 10px 30px;
- color:#fff;
+footer #contactForm > div:first-child{
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+footer #contactForm > div:nth-child(2) {
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+footer #contactForm > div {
+  width:100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-input[type="submit"]:hover
-{
-  background:#fff;
-  color:#000;
+div#giftShops {
+    display: grid;
+    grid-template-columns: repeat(3,30vw);
+    grid-template-rows: 30vh 30vh;
+    padding: 10px 50px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+#giftShops > .giftshop{
+  width:100%;
+  height:100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+#giftShops > .giftshop:nth-child(even) {grid-row-start: 2;grid-row-end: 2;}
+#giftShops > .giftshop:nth-child(n+4) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.giftshop.center {grid-column-start: 2;grid-column-end: 2;grid-row-start: 1;grid-row-end: 3;}
+
+.giftShopText {
+    padding: 20px;
 }
