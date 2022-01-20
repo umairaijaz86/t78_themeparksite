@@ -175,8 +175,32 @@ header nav > ul > li ul > li {
   background-size: cover;
   background-position: center center;
   width: 100%;
+  position:relative;
+  overflow: hidden;
 }
-
+.topBanner .banner video{
+  width:100%;
+}
+.banner .bannerText{
+  position:absolute;
+}
+.topBanner .banner .bannerText
+{
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  padding: 20px;
+  background: #0000001f;
+  color: #fff;
+}
+.bannerText h1{
+  font-size:72px;
+}
 /* Index page*/
 
 #ticketsControl {
@@ -444,6 +468,7 @@ div#whatsnewList {display: flex;column-gap: 2%;padding: 50px;}
   transform:scale(1);
   transition-duration: 500ms;
   transition-property: transform;
+  border-radius: 5px;
 }
 
 .restaurantImage:hover {
@@ -630,4 +655,12 @@ div#giftShops {
 
 .giftShopText {
     padding: 20px;
+}
+
+section#parkMap {
+    padding: 0;
+}
+
+section#timings {
+    margin-bottom: 60px;
 }
