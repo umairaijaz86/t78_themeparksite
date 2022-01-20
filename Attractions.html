@@ -71,19 +71,19 @@
                         <div class = "ride_data">
                             <h3>Ride stats:</h3>
                             <ul>
-                                <li id="rs_parkLocation">
+                                <li class="rs_parkLocation">
                                     <img src="images/icons/location.png" alt="park location icon">
                                     Park location
                                 </li>
-                                <li id="rs_maxSpeed">
+                                <li class="rs_maxSpeed">
                                     <img src="images/icons/ridespeed.png" alt="ride speed icon">
                                     Maximum Ride Speed
                                 </li>
-                                <li id="rs_heightLimit">
+                                <li class="rs_heightLimit">
                                     <img src="images/icons/heighttoride.png" alt="height to ride icon">
                                     Height Limit to ride
                                 </li>
-                                <li id="rs_safeteyRequirement">
+                                <li class="rs_safeteyRequirement">
                                     <img src="images/icons/safetey.png" alt="Safety icon">
                                     Safety Requirements
                                 </li>
@@ -122,19 +122,19 @@
                         <div class = "ride_data">
                             <h3>Ride stats:</h3>
                             <ul>
-                                <li id="rs_parkLocation">
+                                <li class="rs_parkLocation">
                                     <img src="images/icons/location.png" alt="park location icon">
                                     Park location
                                 </li>
-                                <li id="rs_maxSpeed">
+                                <li class="rs_maxSpeed">
                                     <img src="images/icons/ridespeed.png" alt="ride speed icon">
                                     Maximum Ride Speed
                                 </li>
-                                <li id="rs_heightLimit">
+                                <li class="rs_heightLimit">
                                     <img src="images/icons/heighttoride.png" alt="height to ride icon">
                                     Height Limit to ride
                                 </li>
-                                <li id="rs_safeteyRequirement">
+                                <li class="rs_safeteyRequirement">
                                     <img src="images/icons/safetey.png" alt="Safety icon">
                                     Safety Requirements
                                 </li>
@@ -166,19 +166,19 @@
                         <div class = "ride_data">
                             <h3>Ride stats:</h3>
                             <ul>
-                                <li id="rs_parkLocation">
+                                <li class="rs_parkLocation">
                                     <img src="images/icons/location.png" alt="park location icon">
                                     Park location
                                 </li>
-                                <li id="rs_maxSpeed">
+                                <li class="rs_maxSpeed">
                                     <img src="images/icons/ridespeed.png" alt="ride speed icon">
                                     Maximum Ride Speed
                                 </li>
-                                <li id="rs_heightLimit">
+                                <li class="rs_heightLimit">
                                     <img src="images/icons/heighttoride.png" alt="height to ride icon">
                                     Height Limit to ride
                                 </li>
-                                <li id="rs_safeteyRequirement">
+                                <li class="rs_safeteyRequirement">
                                     <img src="images/icons/safetey.png" alt="Safety icon">
                                     Safety Requirements
                                 </li>
@@ -191,9 +191,9 @@
        </section>
        <section id="liveShows" class="darkSection">
            <div id="live_shows_info" class="padded">
-                <center>
+                <div class="center">
                     <h1>Live Shows</h1>
-                </center>
+                </div>
                 <div id="live_show_one" class="liveshowItem">
                     <div class="Live_Show_image" style="background-image:url('images/Page2/Live_show_1.jpg');">
                     </div>
@@ -236,10 +236,10 @@
 
        </section>
        <section id="restaurants">
-            <center>
+            <div class="center">
                 <h1>Restaurants</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-            </center>
+            </div>
            <div id="resturantList" class="padded">
                <div class="restaurant" >
                    <div class="restaurantImage" style="background-image:url('images/Page2/R.jpg')">
@@ -264,117 +264,117 @@
            </div>
 
        </section>
-        <footer>
-            <div>
-                <div class="logo">
-                    <a href="Index.html">
-                        <img src="images/header/logo.png" alt="Theme park logo">
-                    </a>
+       <footer>
+        <div>
+            <div class="logo">
+                <a href="Index.html">
+                    <img src="images/header/logo.png" alt="Theme park logo">
+                </a>
+            </div>
+            <div id="socialMedia">
+                <ul id="socialMediaLinks">
+                    <li>
+                        <a href="https://facebook.comc">
+                            <img src="images/footer/facebook.png" 
+                                alt="theme park facebook page"
+                                >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instragram.com">
+                            <img src="images/footer/instagram.png" 
+                                alt="theme park instagram page"
+                                >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <img src="images/footer/twitter.png" 
+                                alt="theme park twitter page"
+                                >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com">
+                            <img src="images/footer/linkedin.png" 
+                                alt="theme park lined in page"
+                                >
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="navigation">
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li>
+                        <!-- the # href link is to prevent redirects since its the same page-->
+                        <a href="#">Attractions</a>
+                        <!-- Since its the same page , we dont need to redirect
+                    the relative internal links will work with a # href -->
+                        <ul>
+                            <li><a href="#rides">Rides</a></li>
+                            <li><a href="#liveShows">Live Shows</a></li>
+                            <li><a href="#resturants">Resturants</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Discover.html">Discover</a>
+                        <!-- relative links on different page 
+                        will scroll down to the relevant section that matches with the #id-->
+                        <ul>
+                            <li><a href="Discover.html#map">Directions</a></li>
+                            <li><a href="Discover.html#tmings">Schedule</a></li>
+                            <li><a href="Discover.html#parkMap">Park Map</a></li>
+                            <li><a href="Discover.html#hotels">Hotels</a></li>
+                            <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="helpCenter">
+            <h2>Help Center</h2>
+            <address>
+                <p>
+                    78 Creek Ave. <br/>
+                    Key West, FL 33040
+                </p>
+                <p>
+                    <a href="tel:3865550111" >386-555-0111</a>
+                </p>
+            </address>
+        </div>
+        <div id="contactUs">
+            <!-- Self submit form , this will submit the information 
+                on the same page and prevent redirects or errors on submit
+             -->
+            <form id="contactForm">
+                <div>
+                    <input type="text" placeholder="Name" name="name" id="name" required>
                 </div>
-                <div id="socialMedia">
-                    <ul id="socialMediaLinks">
-                        <li>
-                            <a href="https://facebook.comc">
-                                <img src="images/footer/facebook.png" 
-                                    alt="theme park facebook page"
-                                    width="25px;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://instragram.com">
-                                <img src="images/footer/instagram.png" 
-                                    alt="theme park instagram page"
-                                    width="25px;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com">
-                                <img src="images/footer/twitter.png" 
-                                    alt="theme park twitter page"\
-                                    width="25px;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com">
-                                <img src="images/footer/linkedin.png" 
-                                    alt="theme park lined in page"
-                                    width="25px;">
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <input type="email" placeholder="Email" name="email" id="email" required>
                 </div>
+                <div>
+                    <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                </div>
+                <div>
+                    <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Contact us">
+                </div>
+            </form>
+        </div>
+        <div id="copyrights">
+            <hr>
+            <div class="center">
+                <p>&copy;Park Name, All rights reserved</p>
             </div>
-            <div id="navigation">
-                <h2>Navigation</h2>
-                <nav>
-                    <ul>
-                        <li><a href="Index.html">Home</a></li>
-                        <li>
-                            <!-- the # href link is to prevent redirects since its the same page-->
-                            <a href="#">Attractions</a>
-                            <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
-                            <ul>
-                                <li><a href="#rides">Rides</a></li>
-                                <li><a href="#liveShows">Live Shows</a></li>
-                                <li><a href="#resturants">Resturants</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="Discover.html">Discover</a>
-                            <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                            <ul>
-                                <li><a href="Discover.html#map">Directions</a></li>
-                                <li><a href="Discover.html#tmings">Schedule</a></li>
-                                <li><a href="Discover.html#parkMap">Park Map</a></li>
-                                <li><a href="Discover.html#hotels">Hotels</a></li>
-                                <li><a href="Discover.html#giftShop">Gift Shop</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="helpCenter">
-                <h2>Help Center</h2>
-                <address>
-                    <p>
-                        78 Creek Ave. <br/>
-                        Key West, FL 33040
-                    </p>
-                    <p>
-                        <a href="tel:3865550111" >386-555-0111</a>
-                    </p>
-                </address>
-            </div>
-            <div id="contactUs">
-                <!-- Self submit form , this will submit the information 
-                    on the same page and prevent redirects or errors on submit
-                 -->
-                <form id="contactForm">
-                    <div>
-                        <input type="text" placeholder="Name" name="name" id="name" required>
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email" name="email" id="email" required>
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Subject" name="subject" id="subject" required>
-                    </div>
-                    <div>
-                        <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Contact us">
-                    </div>
-                </form>
-            </div>
-            <div id="copyrights">
-                <p><hr></p>
-                <center>
-                    <p>&copy;Park Name, All rights reserved</p>
-                </center>
-            </div>
-        </footer>
+        </div>
+    </footer>
     </body>
 </html>

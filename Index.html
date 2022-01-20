@@ -49,7 +49,7 @@
         </header>
         <section id="mainBanner" class="topBanner">
             <div class="banner" style="background-image: url('images/Page1/ParkBanner.jpg');">
-                <video  autoplay muted loop id="mainBanner">
+                <video  autoplay muted loop id="bannerVideo">
                     <source src="/images/Page1/videoBanner.mp4" type="video/mp4">
                 </video>
                 <div class="bannerText">
@@ -62,9 +62,9 @@
         </section>
         <section id="ticketSearch">
             
-                <center>
+                <div class="center">
                     <h1>Park Tickets and Offers</h1>
-                </center>
+                </div>
                 <div id="ticketsControl">                   
                     <div id="tc_header">
                         <ul>
@@ -74,6 +74,7 @@
                         </ul>
                     </div> 
                     <div id="tc_main">
+                        <!---This is kept blank since the form submits to no server side code or processes-->
                         <form action="" target="_blank" method="post">
                             <div>
                                 <select name="type" id="type">
@@ -110,12 +111,12 @@
                 </div>
         </section>
         <section id="activities">
-            <center>
+            <div class="center">
                 <h1>Activities</h1>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   </p>
-           </center>
+           </div>
            <div id="activityList" class="padded">
               
                <div class="activity">
@@ -127,15 +128,15 @@
                    <div class = "ride_data">
                     <h3>Ride stats:</h3>
                     <ul>
-                        <li id="rs_parkLocation">
+                        <li class="rs_parkLocation">
                             <img src="images/icons/RideType.png" alt="thrillride">
                             Thrillride
                         </li>
-                        <li id="rs_heigth">
+                        <li class="rs_heigth">
                             <img src="images/icons/RideHeight.png" alt="height to ride icon">
                             Height Ride
                         </li>
-                        <li id="rs_thrillride">
+                        <li class="rs_thrillride">
                             <img src="images/icons/location.png" alt="location">
                             Location
                         </li>
@@ -153,15 +154,15 @@
                    <div class = "ride_data">
                     <h3>Ride stats:</h3>
                     <ul>
-                        <li id="rs_parkLocation">
+                        <li class="rs_parkLocation">
                             <img src="images/icons/RideType.png" alt="thrillride">
                             Thrillride
                         </li>
-                        <li id="rs_heigth">
+                        <li class="rs_heigth">
                             <img src="images/icons/RideHeight.png" alt="height to ride icon">
                             Height Ride
                         </li>
-                        <li id="rs_thrillride">
+                        <li class="rs_thrillride">
                             <img src="images/icons/location.png" alt="location">
                             Location
                         </li>
@@ -179,15 +180,15 @@
                     <div class = "ride_data">
                         <h3>Ride stats:</h3>
                         <ul>
-                            <li id="rs_parkLocation">
+                            <li class="rs_parkLocation">
                                 <img src="images/icons/RideType.png" alt="thrillride">
                                 Thrillride
                             </li>
-                            <li id="rs_heigth">
+                            <li class="rs_heigth">
                                 <img src="images/icons/RideHeight.png" alt="height to ride icon">
                                 Height Ride
                             </li>
-                            <li id="rs_thrillride">
+                            <li class="rs_thrillride">
                                 <img src="images/icons/location.png" alt="location">
                                 Location
                             </li>
@@ -198,21 +199,18 @@
 
         </section>
         <section id="advertismentBanner" class="banner">
-            <div id="advertismentBanner">
-                <div class="ride_one">
-                    <div class="banner">
-                        <img src="images/Page1/02_Banner.jpg" alt = "banner" width = "100%">
-                    </div>
-
+            <div class="advertisment banner" style="background-image: url('images/Page1/02_Banner.jpg');">
+                        
+            </div>
         </section>
 
         <section id="whatsnew">
-            <center>
+            <div class="center">
                 <h1>What's new</h1>
                 <p>
                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                  </p>
-           </center>
+           </div>
             <div id="whatsnewList" class="padded">
                 
                 <div class="whatsnew">
@@ -262,7 +260,7 @@
         <footer>
             <div>
                 <div class="logo">
-                    <a href="#">
+                    <a href="Index.html">
                         <img src="images/header/logo.png" alt="Theme park logo">
                     </a>
                 </div>
@@ -272,28 +270,28 @@
                             <a href="https://facebook.comc">
                                 <img src="images/footer/facebook.png" 
                                     alt="theme park facebook page"
-                                    width="25px;">
+                                    >
                             </a>
                         </li>
                         <li>
                             <a href="https://instragram.com">
                                 <img src="images/footer/instagram.png" 
                                     alt="theme park instagram page"
-                                    width="25px;">
+                                    >
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com">
                                 <img src="images/footer/twitter.png" 
-                                    alt="theme park twitter page"\
-                                    width="25px;">
+                                    alt="theme park twitter page"
+                                    >
                             </a>
                         </li>
                         <li>
                             <a href="https://linkedin.com">
                                 <img src="images/footer/linkedin.png" 
                                     alt="theme park lined in page"
-                                    width="25px;">
+                                    >
                             </a>
                         </li>
                     </ul>
@@ -305,15 +303,20 @@
                     <ul>
                         <li><a href="Index.html">Home</a></li>
                         <li>
+                            <!-- the # href link is to prevent redirects since its the same page-->
                             <a href="#">Attractions</a>
+                            <!-- Since its the same page , we dont need to redirect
+                        the relative internal links will work with a # href -->
                             <ul>
-                                <li><a href="Attractions.html#rides">Rides</a></li>
-                                <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                                <li><a href="Attractions.html#resturants">Resturants</a></li>
+                                <li><a href="#rides">Rides</a></li>
+                                <li><a href="#liveShows">Live Shows</a></li>
+                                <li><a href="#resturants">Resturants</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Discover</a>
+                            <a href="Discover.html">Discover</a>
+                            <!-- relative links on different page 
+                            will scroll down to the relevant section that matches with the #id-->
                             <ul>
                                 <li><a href="Discover.html#map">Directions</a></li>
                                 <li><a href="Discover.html#tmings">Schedule</a></li>
@@ -360,10 +363,10 @@
                 </form>
             </div>
             <div id="copyrights">
-                <p><hr></p>
-                <center>
+                <hr>
+                <div class="center">
                     <p>&copy;Park Name, All rights reserved</p>
-                </center>
+                </div>
             </div>
         </footer>
     </body>
