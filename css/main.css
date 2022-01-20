@@ -3,27 +3,29 @@
  body,html{
   padding:0;
   margin:0;
+  font-family: Roboto !important;
+  font-style: normal;
 }
 
 
-a,a:visited {color: #fff; text-decoration:none;font-style: normal;}
+a,a:visited {color: #fff; text-decoration:none;}
 
 .darkSection{
  background: rgb(230,230,230);
 }
 
-h1 {
-  font-family: Roboto;
-  font-style: normal;
+h1 {  
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   align-items: center;
 }
+p
+{
 
+}
 section {
  padding: 10px 0;
- /* display: flex; */
 }
 
 section .padded {
@@ -31,15 +33,11 @@ section .padded {
 }
 
 section.topBanner {
- 
-padding-top: 0px;
- 
-z-index: 10;
+  padding-top: 0px;
+  z-index: 10;
 }
 
 /* Menu */
-
-
 header {
   background: #ffffffbd;
   display: flex;
@@ -51,13 +49,11 @@ header {
   padding: 0 5vw;
   text-align: left;
 }
+
 header nav {
   width: 100%;
   grid-template-columns: 0 auto;
   margin: auto;
-  /* position: relative; */
-  /* left: 0; */
-  /* right: 0; */
   display: grid;
   text-align: left;
 }
@@ -73,15 +69,15 @@ header nav > ul {
 header nav > ul  li {
   list-style: none;
 }
+
 header nav > ul li:last-child
 {
   border-bottom:none;
 }
+
 header nav > ul  li a{
   color:#000 !important;
   text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   line-height: 14px;
   display: flex;
@@ -96,6 +92,7 @@ header nav ul ul{
   padding: 10px;
   left: 0;
 }
+
 header nav > ul > li {
   list-style: none;
   float: left;
@@ -106,6 +103,7 @@ header nav > ul > li {
 header nav > ul > li:hover ul{
   display:block;
 }
+
 header nav > ul > li ul
 {
   padding: 0 10px;
@@ -114,6 +112,7 @@ header nav > ul > li ul
   -webkit-box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
   box-shadow: 0px 7px 4px 0px rgba(0,0,0,0.18);
 }
+
 header nav > ul > li ul > li {
   padding:10px;
   border-bottom:1px solid #c3c3c3;
@@ -146,11 +145,11 @@ header nav > ul > li ul > li {
    flex-wrap: wrap;
    display: flex;
    flex-wrap: wrap;
-   /* column-gap: 0; */
    vertical-align: top;
    align-items: self-start;
    justify-content: space-between;
 }
+
 #tc_header ul  {
   list-style: none;
   flex-wrap: wrap;
@@ -167,8 +166,6 @@ header nav > ul > li ul > li {
 #tc_header ul > li {
   float: left;
   list-style: none;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 22px;
   line-height: 28px;
@@ -187,8 +184,8 @@ header nav > ul > li ul > li {
 .activity {
   width: 30%;
   float: left;
-  font-family: Roboto;
-  font-style: normal;
+  
+  
   border: 1px solid #000;
   padding: 10px;
   margin: 0 0.5%;
@@ -205,12 +202,11 @@ header nav > ul > li ul > li {
   font-size: 24px;
   line-height: 28px;
   align-items: center;
-  /* padding: 0 !important; */
 }
 
 .activity p{
-  font-family: Roboto;
-  font-style: normal;
+  
+  
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -379,8 +375,8 @@ footer *{
  color:#fff;
  padding-top: 0;
  margin-top: 0;
- font-style: normal;
- font-family: Roboto;
+ 
+ 
 }
 
 footer > div {
@@ -442,7 +438,6 @@ input[type="submit"]
  border:1px solid;
  padding: 10px 30px;
  color:#fff;
- font-family: Roboto;
 }
 
 input[type="submit"]:hover
