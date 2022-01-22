@@ -1229,9 +1229,9 @@ footer #contactUs{
 }
 
 footer form input:not([type="submit"]), footer form textarea {
-  width: -webkit-fill-available;  
+  width: -webkit-fill-available;
   border-radius: 0;
-  background:#313131;
+  background: #313131b0;
 }
 
 footer form input[type="submit"]
