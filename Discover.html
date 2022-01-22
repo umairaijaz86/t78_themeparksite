@@ -236,41 +236,33 @@
                 </div>
             </div>
         </section>
-        <footer>
+        <footer aria-label="Footer section">
             <div>
                 <div class="logo">
                     <a href="Index.html">
-                        <img src="images/footer/logo.png" alt="Theme park logo">
+                        <img src="images/footer/logo.png" alt="Thrill ventures logo">
                     </a>
                 </div>
                 <div id="socialMedia">
-                    <ul id="socialMediaLinks">
+                    <ul id="socialMediaLinks" aria-label="Social media links">
                         <li>
-                            <a href="https://facebook.comc">
-                                <img src="images/footer/facebook.png" 
-                                    alt="theme park facebook page"
-                                    >
+                            <a href="https://facebook.com"  target="_blank" aria-label="Facebook link">
+                                <img src="images/footer/facebook.png" alt="theme park facebook page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instragram.com">
-                                <img src="images/footer/instagram.png" 
-                                    alt="theme park instagram page"
-                                    >
+                            <a href="https://instragram.com"  target="_blank" aria-label="instagram link">
+                                <img src="images/footer/instagram.png" alt="theme park instagram page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com">
-                                <img src="images/footer/twitter.png" 
-                                    alt="theme park twitter page"
-                                    >
+                            <a href="https://twitter.com"  target="_blank" aria-label="Twitter link">
+                                <img src="images/footer/twitter.png" alt="theme park twitter page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com">
-                                <img src="images/footer/linkedin.png" 
-                                    alt="theme park lined in page"
-                                    >
+                            <a href="https://linkedin.com"  target="_blank" aria-label="linkedin link">
+                                <img src="images/footer/linkedin.png" alt="theme park lined in page"></a>
                             </a>
                         </li>
                     </ul>
@@ -278,30 +270,48 @@
             </div>
             <div id="navigation">
                 <h4>Navigation</h4>
-                <nav>
+                <nav  aria-label="Footer navigatoin">
                     <ul>
-                        <li><a href="Index.html">Home</a></li>
+                        <li>
+                            <a href="Index.html" aria-label="Homepage link"></a>Home</a>
+                        </li>
                         <li>
                             <!-- the # href link is to prevent redirects since its the same page-->
-                            <a href="#">Attractions</a>
-                            <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
+                            <a href="#" aria-label="Attractions page link"></a>Attractions</a>
+                            <!-- Since its the same page , we dont need to redirect the relative internal
+                            links will work with a # href -->
                             <ul>
-                                <li><a href="#rides">Rides</a></li>
-                                <li><a href="#liveShows">Live Shows</a></li>
-                                <li><a href="#restaurants">Restaurants</a></li>
+                                <li>
+                                    <a href="Attractions.html#rides" aria-label="link to rides section on Attractions page"></a>Rides</a>
+                                </li>
+                                <li>
+                                    <a href="Attractions.html#liveShows" aria-label="link to live shows seciton on Attractions page"></a>Live Shows</a>
+                                </li>
+                                <li>
+                                    <a href="Attractions.html#restaurants" aria-label="link to Restaurants section on Attractions page"></a>Restaurants</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="Discover.html">Discover</a>
-                            <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
+                            <a href="Discover.html" aria-label="Discover the park page link">Discover</a>
+                            <!-- relative links on different page will scroll down to the relevant section
+                            that matches with the #id-->
                             <ul>
-                                <li><a href="Discover.html#map">Directions</a></li>
-                                <li><a href="Discover.html#tmings">Schedule</a></li>
-                                <li><a href="Discover.html#parkMap">Park Map</a></li>
-                                <li><a href="Discover.html#hotels">Hotels</a></li>
-                                <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                                <li>
+                                    <a href="Discover.html#map" aria-label="link to directions section on the Discover page">Directions</a>
+                                </li>
+                                <li>
+                                    <a href="Discover.html#tmings" aria-label="link to sechdule section on the Discover page">Schedule</a>
+                                </li>
+                                <li>
+                                    <a href="Discover.html#parkMap" aria-label="link to park map section on the Discover page">Park Map</a>
+                                </li>
+                                <li>
+                                    <a href="Discover.html#hotels" aria-label="link to Hotels section on the Discover page">Hotels</a>
+                                </li>
+                                <li>
+                                    <a href="Discover.html#giftShop" aria-label="link to giftshop section on the Discover page">Gift Shop</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -309,42 +319,55 @@
             </div>
             <div id="helpCenter">
                 <h4>Help Center</h4>
-                <address>
+                <address aria-label="Park help center address">
                     <p>
-                        78 Creek Ave. <br/>
+                        78 Creek Ave.
+                        <br>
                         Key West, FL 33040
                     </p>
                     <p>
-                        <a href="tel:3865550111" >386-555-0111</a>
+                        <a href="tel:3865550111" aria-label="help center phone number, click to call">386-555-0111</a>
                     </p>
                 </address>
             </div>
             <div id="contactUs">
-                <!-- Self submit form , this will submit the information 
-                    on the same page and prevent redirects or errors on submit
-                 -->
-                <form id="contactForm">
+                <!-- Self submit form , this will submit the information on the same page and
+                prevent redirects or errors on submit -->
+                <form id="contactForm" aria-label="Contact us form">
                     <div>
-                        <input type="text" placeholder="Name" name="name" id="name" required>
+                        <input type="text" aria-label="input your Name,Required" placeholder="Name" name="name" id="name" required="">
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" name="email" id="email" required>
+                        <input type="email" aria-label="input your email, Required" placeholder="Email" name="email" id="email" required="">
                     </div>
                     <div>
-                        <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            aria-label="input contact subject or reason, required"
+                            name="subject"
+                            id="subject"
+                            required="">
                     </div>
                     <div>
-                        <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            aria-label="Input contact message required"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            required=""></textarea>
                     </div>
                     <div>
-                        <input type="submit" value="Contact us">
+                        <input type="submit" value="Contact us" aria-label="Submit contact form">
                     </div>
                 </form>
             </div>
             <div id="copyrights">
                 <hr>
                 <div class="center">
-                    <p>&copy;Park Name, All rights reserved</p>
+                    <p>©Park Name, All rights reserved</p>
                 </div>
             </div>
         </footer>
