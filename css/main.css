@@ -953,6 +953,28 @@ transform:scale(1.1);
  
 }
 
+
+
+.restaurantText {
+  position: absolute;
+  color: var(--text-invert);
+  font-weight: 700;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #000000ad;
+  padding: 10px;
+  bottom: -82px;
+  transition-duration: 500ms;
+  transition-property: bottom;
+}
+
+.restaurantImage:hover .restaurantText{
+  bottom:0;
+}
+
 #restaurantOne {
   background-image: url('/images/Page2/Restaurants/food_1.jpg');
 }
@@ -1295,20 +1317,3 @@ footer #contactForm > div {
   grid-column-end: 3;
 }
 
-
-
-.restaurantText {
-    position: absolute;
-    color: var(--text-invert);
-    font-weight: 700;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #000000ad;
-    padding: 10px;
-    bottom: -82px;
-    transition-duration: 500ms;
-    transition-property: bottom;
-}
