@@ -867,6 +867,10 @@ ul.ridePopularity li > p {
 
 /* Live Show */
 
+#liveShows {
+    padding-bottom: 0;
+}
+
 #live_shows_info .liveshowItem {
   display: flex;
   align-items: center;
