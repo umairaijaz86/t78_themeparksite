@@ -574,15 +574,15 @@ header nav > ul > li ul > li {
 }
 
 #activityOne .img {
-  background-image: url('/images/Page1/Rides.jpg');
+  background-image: url('/images/Page1/Activities/Rides.jpg');
 }
 
 #activityTwo .img{
-  background-image: url('/images/Page1/Hotels.jpg');
+  background-image: url('/images/Page1/Activities/Hotels.jpg');
 }
 
 #activityThree .img {
-  background-image: url('/images/Page1/Restaurants.jpg');
+  background-image: url('/images/Page1/Activities/Restaurants.jpg');
 }
 
 
@@ -651,6 +651,9 @@ header nav > ul > li ul > li {
     text-align: center;
     width: 22px;
 }
+.activity_data i.fas.fa-dragon {
+  margin-right: -9px;
+}
 
 .activity_data li > p {
     padding: 0;
@@ -702,6 +705,7 @@ div#whatsnewList {
    position: relative;
    overflow: hidden;
    border-top-right-radius: 49px;
+   background-size: cover !important;
 }
 
 
@@ -709,7 +713,7 @@ div#whatsnewList {
   background: var(--backgroundColor);
   color: var(--text-color) !IMPORTANT;
   padding: 20px;
-  text-align: justify;
+  text-align: left;
   transition-property: transform;
   flex-grow: 1;
   z-index: 4;
@@ -745,16 +749,16 @@ div#whatsnewList {
     margin-bottom: 19px;
 }
 #newsOne .img {
-  background: url('/images/Page1/Live_show_1.jpg');
+  background: url('/images/Page1/WhatsNew/Live_show_1.jpg');
 }
 #newsTwo .img {
-  background: url('/images/Page1/Live_Show_2.jpg');
+  background: url('/images/Page1/WhatsNew/Live_Show_2.jpg');
 }
 #newsThree .img {
-  background: url('/images/Page1/New_hotel.jpg');
+  background: url('/images/Page1/WhatsNew/New_hotel.jpg');
 }
 #newsFour .img {
-  background: url('/images/Page1/New_restaurant.jpg');
+  background: url('/images/Page1/WhatsNew/New_restaurant.jpg');
 }
 /* Attractions page */
 
@@ -849,15 +853,15 @@ ul.ridePopularity li > p {
 }
 
 #ride_one .banner {
-  background-image: url('/images/Page2/02_Banner.jpg');
+  background-image: url('/images/Page2/Rides/02_Banner.jpg');
 }
 
 #ride_two .banner {
-  background-image: url('/images/Page2/03_Banner.jpg');
+  background-image: url('/images/Page2/Rides/03_Banner.jpg');
 }
 
 #ride_three .banner {
-  background-image: url('/images/Page2/05_Banner.jpg')
+  background-image: url('/images/Page2/Rides/05_Banner.jpg')
 }
 
 
@@ -878,11 +882,11 @@ ul.ridePopularity li > p {
 }
 
 #live_show_one .img {
-  background-image:url('/images/Page2/Live_show_1.jpg');
+  background-image:url('/images/Page2/Liveshow/Live_show_1.jpg');
 }
 
 #live_show_two .img {
-  background-image:url('/images/Page2/Live_Show_2.jpg')
+  background-image:url('/images/Page2/Liveshow/Live_Show_2.jpg')
 }
 
 .Live_Show_text {
@@ -945,19 +949,19 @@ transform:scale(1.1);
 }
 
 #restaurantOne {
-  background-image: url('/images/Page2/food_1.jpg');
+  background-image: url('/images/Page2/Restaurants/food_1.jpg');
 }
 
 #restaurantTwo {
-  background-image: url('/images/Page2/food_2.jpg');
+  background-image: url('/images/Page2/Restaurants/food_2.jpg');
 }
 
 #restaurantThree {
-  background-image: url('/images/Page2/food_3.jpg');
+  background-image: url('/images/Page2/Restaurants/food_3.jpg');
 }
 
 #restaurantFour {
-  background-image: url('/images/Page2/food_4.jpg');
+  background-image: url('/images/Page2/Restaurants/food_4.jpg');
 }
 
 /*Discover Page. Park Map & Table for Schedule of the Park*/
