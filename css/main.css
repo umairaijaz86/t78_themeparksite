@@ -1243,13 +1243,10 @@ footer #navigation nav > ul > li {
   margin-bottom:20px
 }
 
-footer #helpCenter {
-
+footer #helpCenter *{
+  font-style: normal;
 }
 
-footer #contactUs{
-
-}
 
 footer form input:not([type="submit"]), footer form textarea {
   width: -webkit-fill-available;
