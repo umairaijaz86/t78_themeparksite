@@ -996,7 +996,7 @@ transform:scale(1.1);
 
 #map .banner {
   position: relative;
-  background-image: url('/Images/Page3/ParkLocation.png');
+  background-image: url('/Images/Page3/Locations/ParkLocation.png');
 }
 
 #map address {
