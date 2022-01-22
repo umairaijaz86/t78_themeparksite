@@ -9,58 +9,76 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <header>
+        <!-- Header Menu-->
+        <header aria-label="Header">
             <div id="logo">
-                <a href="Index.html">
-                    <img src="images/header/logo.png" alt="Theme park logo">
+                <a href="#">
+                    <img src="images/header/logo.png" alt="Thrill Ventures logo">
                 </a>
-                <br/>
+                <br>
             </div>
-            <nav>
+            <nav aria-label="top navigation bar">
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
                     <li>
                         <!-- the # href link is to prevent redirects since its the same page-->
-                        <a href="#">Attractions</a>
-                        <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
-                        <ul>
-                            <li><a href="#rides">Rides</a></li>
-                            <li><a href="#liveShows">Live Shows</a></li>
-                            <li><a href="#resturants">Resturants</a></li>
+                        <a href="#" aria-label="Home page link">Home</a>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="Attractions.html" aria-label="Attraction page link">Attractions</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Attraction Sections links" aria-label="Attractions page section">
+                            <li>
+                                <a href="Attractions.html#rides" aria-label="Rides link">Rides</a>
+                            </li>
+                            <li>
+                                <a href="Attractions.html#liveShows" aria-label="Live shows">Live Shows</a>
+                            </li>
+                            <li>
+                                <a href="Attractions.html#resturants" aria-label="Restaurants link">Restaurants</a>
+                            </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="Discover.html">Discover</a>
-                        <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                        <ul>
-                            <li><a href="Discover.html#map">Directions</a></li>
-                            <li><a href="Discover.html#tmings">Schedule</a></li>
-                            <li><a href="Discover.html#parkMap">Park Map</a></li>
-                            <li><a href="Discover.html#hotels">Hotels</a></li>
-                            <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                    <li class="hasSubmenu">
+                        <a href="Discover.html" aria-label="Discover the Park page link">Discover</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Discover page sections">
+                            <li>
+                                <a href="Discover.html#map" aria-label="park directions section">Directions</a>
+                            </li>
+                            <li>
+                                <a href="Discover.html#tmings" aria-label="Park schedule and timings">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="Discover.html#parkMap" aria-label="Park map link" >Park Map</a>
+                            </li>
+                            <li>
+                                <a href="Discover.html#hotels" aria-label="Hotels links" >Hotels</a>
+                            </li>
+                            <li>
+                                <a href="Discover.html#giftShop" aria-label="Gift shop link">Gift Shop</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-       <section id="rides">
+       <section id="rides" class="darkSection" aria-label="Rides section with list of roller coasters">
             <div id="rideList">
                 <div id="ride_one">
-                    <div class="banner rideBanner" style="background-image: url('images/Page2/02_Banner.jpg');">
+                    <div class="banner rideBanner">
+                        <span role="img" aria-label="Banner for Roller coaster called the long way day, large roaller coaster image  with people enjoying"> </span>
                     </div>
                     <div class="ride_information padded">
-                        <h1>The Long way down</h1>
-                        <div class = "ride_description">
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of
-                            scrambled it to make a type specimen book.</p>
-        
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been .
+                        <h2 aria-label="Rollercoaster name. The long way down">The Long way down</h2>
+                        <div class = "ride_description" ara-label="Ride descirption">
+                            <p>
+                                This terrific looping roller coaster attraction is a perfect balance of anticipation and suspense, unbridled thrills and unmatched wonder - where you're constantly at the cusp of heading into an inversion and you wonder when will it happen?
+                            </p>
+
+                            <p>
+                                It is a matter of momentum that finally takes riders, seated face-to-face or back-to-back, looping full speed around the single circular track up to seven stories high, only to stop and suspend riders upside-down before reversing direction for more thrills and fun.
                             </p>
                             <div class="ride_ticket">
                                 <p>Ticket 26$</p>
@@ -98,20 +116,15 @@
                 </div>
  
                 <div id="ride_two">
-                    <div class="banner rideBanner" style="background-image:url('images/Page2/03_Banner.jpg');">
+                    <div class="banner rideBanner">
     
                     </div>
                     <div class="ride_information padded">
-                        <h1>Double Twist</h1>
+                        <h2>Double Twist</h2>
                         <div class = "ride_description">
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of
-                            scrambled it to make a type specimen book.</p>
-        
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been .
+                            <p>It's one thing to ride a wave with friends, and another thing to be the wave! with the mirror opposite riding with you a few feet away from you. </p>
+                            <p>
+                                Step into the peaceful-looking chariot over a picturesque lagoon. But be warned, this ride will be anything but peaceful. Pile into our roaring carriage and try to catch your breath while we crank you up notch by notch, higher than the trees. Brace yourself for what's coming next - an ultra-steep drop down a 60-foot drop with the twin rides screeching into g-foce twists straight into the tunnle through the lagoon below you.
                             </p>
                             <div class="ride_ticket">
                                 <p>Ticket 26$</p>
@@ -146,7 +159,7 @@
                     <div class="banner rideBanner" style="background-image: url('images/Page2/05_Banner.jpg');">
                     </div>
                     <div class="ride_information padded">
-                        <h1>The Inferno</h1>
+                        <h2>The Inferno</h2>
                         <div class = "ride_description">
                             <p>Lorem Ipsum is simply dummy text of the printing 
                             and typesetting industry. Lorem Ipsum has been 
@@ -189,43 +202,35 @@
                 </div>
             </div>
        </section>
-       <section id="liveShows" class="darkSection">
-           <div id="live_shows_info" class="padded">
+       <section id="liveShows" >
+           <div id="live_shows_info">
                 <div class="center">
                     <h1>Live Shows</h1>
                 </div>
-                <div id="live_show_one" class="liveshowItem">
-                    <div class="Live_Show_image" style="background-image:url('images/Page2/Live_show_1.jpg');">
+                <div id="live_show_one" class="liveshowItem darkSection">
+                    <div class="img" style="background-image:url('images/Page2/Live_show_1.jpg');">
                     </div>
                     <div class = "Live_Show_text" >
-                        <h2>Loren Ipsum</h2>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2>The Festival of the Lion King</h2>
+                        <p> The Festival of the Lion King is an uplifting celebration of Simba, the main character in Disney's classic film The Lion King. If you are a fan of The Lion King and its memorizing musical score - especially the 1994 Academy Awards winning song “Can You Feel The Love Tonight” - you don't want to miss this lively Broadway-style musical!</p>
             
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <p>Along with live performances of your favorite Lion King tunes, the show also features a fast-paced array of live aerials, acrobatics, stunts, dancing, fire twirling, and character performances. Audience participation is highly encouraged and the show is enjoyable for guests of all ages.</p>
                             
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>The Festival of the Lion King takes place in the enchanting Harambe Village section of Animal Kingdom. Performances are conveniently scheduled at various times throughout the day. Advanced tickets are not required; simply get your spot in line about 30 minutes before the next showtime and you should be good to go.</p>
                     </div>
 
 
                 </div>
-                <div id="live_show_two" class="liveshowItem">
-                    <div class="Live_Show_image" style="background-image:url('images/Page2/Live_Show_2.jpg')">
+                <div id="live_show_two" class="liveshowItem darkSection">
+                    <div class="img" style="background-image:url('images/Page2/Live_Show_2.jpg')">
                     </div>
                     <div class = "Live_Show_text">
-                        <h2>Loren Ipsum</h2>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2>Discover Our Ocean Friends</h2>
+                        <p> Dolphins are mesmerizing for many reasons and some people often apply human characteristics to these intelligent and clever marine mammals because of the seemingly human qualities they exhibit. They are full of personality and very different from one another! In the Discover Our Ocean Friends educational demonstration show, observe the bond our bottlenose dolphins have with their Animal Care Specialists as they are taken through a variety of natural behaviors. And yes, when a dolphin doesn't feel like doing something, they don't have to!</p>
             
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <p>Get to know our dolphins and see how special they all are. The show takes place at Dolphin Harbor, the entrance of which is located to the right of the Main Plaza or at the top of the stairs from Oasis Plaza.</p>
                             
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Want to interact with our dolphins? Dolphin Discovery is an opportunity for you to interact in-water with these incredible animals. Special savings available.</p>
                     </div>
 
 
