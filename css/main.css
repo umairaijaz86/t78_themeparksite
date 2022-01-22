@@ -1,7 +1,6 @@
-@import url('http://fonts.cdnfonts.com/css/ozda');
  /* General */
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900');
-
+ @import url('http://fonts.cdnfonts.com/css/ozda');
+ @import url('https://fonts.googleapis.com/css2?family=Freehand&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
  @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 
  :root {
@@ -12,6 +11,7 @@
   --color-three: #ff973b;
   --color-four: #2f95dd;
   --text-color: #000;
+  --golden:#ffd700;
   --text-invert: #fff;
   --callToAction: #cb2828;
   --accentColor: #294486;
@@ -31,8 +31,11 @@ body,html{
   color:var(--text-color);
 }
 
-a,a:visited {color: var(--text-invert); text-decoration:none;}
-
+a,
+a:visited {
+    color: var(--text-invert);
+    text-decoration: none;
+}
 
 h1 {
   font-weight: bold;
@@ -60,22 +63,6 @@ h6 {
    font-size: 16px;
 }
 
-
-section {
-  padding: 20px 0 80px;
-  margin-bottom: auto;
- }
-
-section .padded {
- padding:10px;
-}
-
-section.topBanner {
-  padding: 0;
-  z-index: 10;
-  margin-bottom: 0;
-}
-
 input[type="text"], input[type="email"],textarea {
   padding: 10px;
   width: 89%;
@@ -93,13 +80,51 @@ input[type="date"]{
 
 Select{width:200px;padding: 9px;border-radius: 5px;}
 
-input[type="submit"]
-{background: var(--callToAction);border:1px solid;padding: 10px 49px;color: #ededed;border-radius: 20px;font-weight: 700;font-size: 16px;font-family: 'Montserrat', sans-serif;}
+input[type="submit"] {
+    background: var(--callToAction);
+    border: 1px solid;
+    padding: 10px 49px;
+    color: #ededed;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
 
 input[type="submit"]:hover
 {
  background: var(--callToAction-hover);
  color: var(--text-invert);
+}
+
+section {
+  padding: 20px 0 80px;
+  margin-bottom: auto;
+ }
+
+ 
+section.topBanner {
+  padding: 0;
+  z-index: 10;
+  margin-bottom: 0;
+}
+
+
+body > section:first-of-type {
+  padding-top: 0;
+}
+
+.padded {
+ padding:10px;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.nopadding h1 {
+  padding: 100px 0;
+  margin: 0;
 }
 
 .darkSection{
@@ -130,6 +155,15 @@ input[type="submit"]:hover
   margin:auto;
 }
 
+.bannerText h1 {
+  padding: 0;
+  margin: 0;
+  line-height: 80px;
+  font-size: 120px;
+  font-weight: 100;
+  font-family: 'Ozda', sans-serif;
+}
+
 .btn {
   border-radius:50px;
   text-align: center;
@@ -156,6 +190,17 @@ input[type="submit"]:hover
   color: var(--text-invert);
 }
 
+.color-one .coloredButtonFilled {
+  background: var(--color-one);
+  border:2px solid var(--color-one);
+  color: var(--text-invert);
+}
+.color-one .coloredButtonFilled:hover {
+  background: var(--backgroundColor);
+  color: var(--color-one);
+}
+
+
 .color-two .coloredText,
 .color-two .coloredText * {
   color:var(--color-two);
@@ -176,6 +221,16 @@ input[type="submit"]:hover
 .color-two .coloredButton:hover {
   background: var(--color-two);
   color: var(--text-invert);
+}
+
+.color-two .coloredButtonFilled {
+  background: var(--color-two);
+  border:2px solid var(--color-two);
+  color: var(--text-invert);
+}
+.color-two .coloredButtonFilled:hover {
+  background: var(--backgroundColor);
+  color: var(--color-two);
 }
 
 .color-three .coloredText,
@@ -200,6 +255,16 @@ input[type="submit"]:hover
   color: var(--text-invert);
 }
 
+.color-three .coloredButtonFilled {
+  background: var(--color-three);
+  border:2px solid var(--color-three);
+  color: var(--text-invert);
+}
+.color-three .coloredButtonFilled:hover {
+  background: var(--backgroundColor);
+  color: var(--color-three);
+}
+
 .color-four .coloredText,
 .color-four .coloredText * {
   color:var(--color-four);
@@ -222,6 +287,16 @@ input[type="submit"]:hover
   color: var(--text-invert);
 }
 
+.color-four .coloredButtonFilled {
+  background: var(--color-four);
+  border:2px solid var(--color-four);
+  color: var(--text-invert);
+}
+.color-four .coloredButtonFilled:hover {
+  background: var(--backgroundColor);
+  color: var(--color-four);
+}
+
 .lightText * {
   color: var(--text-invert) !important;
 }
@@ -240,17 +315,14 @@ input[type="submit"]:hover
   height: 60px;
 }
 
-
 header {
   display: flex;
   width: 90vw;
-  z-index: 3;
+  z-index: 100;
   position: fixed;
   padding: 0 5vw;
   text-align: center;
-  
   justify-content: center;
-  
   background: transparent;
   top: 20px;
   -webkit-box-shadow: unset;
@@ -267,11 +339,9 @@ html:not([data-scroll='0']) header {
   border:none;
 }
 
-header nav {
-  /* width: 100%; */
+header nav {  
   grid-template-columns: 0 auto;
   margin: auto;
-  /* display: grid; */
   text-align: center;
 }
 header #logo {
@@ -284,9 +354,9 @@ header #logo {
 header nav > ul {
   display: flex;
   column-gap: 40px;
-  /* margin-top: 0; */
   padding: 0;
 }
+
 
 header nav > ul  li {
   list-style: none;
@@ -297,8 +367,13 @@ header nav > ul li:last-child
   border-bottom:none;
 }
 
+
+header nav > ul li.current a {
+  color: #656565;
+}
+
 header nav > ul  li a{
-  color: #fff;
+  color: var(--text-invert);
   text-decoration: none;
   font-weight: 500;
   line-height: 14px;
@@ -313,7 +388,7 @@ header nav > ul  li a{
 header nav ul ul{
   display:none;
   position: absolute;
-  background: #ffffff;
+  background: var(--backgroundColor);
   padding: 10px;
   left: 0;
 }
@@ -344,22 +419,38 @@ header nav ul.submenu
   box-shadow: 0 5px 40px rgb(0 0 0 / 15%);
 }
 
-header nav > ul > li ul > li {
-  padding:10px;
-  /* border-bottom:1px solid #c3c3c3; */
+
+header nav ul.submenu a {
+  color: var(--text-color);
 }
 
+header nav > ul > li.hasSubmenu:before {
+  content: "\f078";
+  position: absolute;
+  color: var(--text-invert);
+  right: -14px;
+  font-family: 'Font Awesome 5 Pro';
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+header nav > ul > li ul > li {
+  padding:10px;
+}
 
 .topBanner .banner {
   height: 100vh;
 }
+
 .topBanner .banner video{
   width:100%;
   filter: saturate(2);
 }
+
 .banner .bannerText{
   position:absolute;
 }
+
 .banner .bannerText
 {
   top:0;
@@ -443,7 +534,6 @@ header nav > ul > li ul > li {
  border-right:none;
 }
 
-
 .activity {
   width: 30%;
   margin: 0 0.5%;
@@ -509,13 +599,21 @@ header nav > ul > li ul > li {
   line-height: 16px;
 }
 
-.activity > h3, .activity p {
+.activity > h3, .activity > p {
   text-align:center;
   padding:0 10px;
 }
 
-.activity > h3, .activity p, .activity_data, .ride_data{
+.activity > h3, .activity p, .activity_data {
   flex-grow: 1;
+}
+
+.ride_data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
 }
 
 .activity_data {
@@ -525,9 +623,31 @@ header nav > ul > li ul > li {
 .activity_data ul, .ride_data ul{
   list-style: none;
   padding: 0;
+  flex-grow: 1;
+  text-align: left;
 }
 
+.activity_data li,.ride_data li {
+    display: flex;
+    align-items: center;
+}
 
+.activity_data li > i,.ride_data li > i{
+    font-size: 18px;
+    text-align: center;
+    width: 22px;
+}
+
+.activity_data li > p {
+    padding: 0;
+    margin: 10px 30px 10px;
+    flex-grow: 1;
+}
+.ride_data li > p{
+    padding: 0;
+    margin: 5px 15px;
+    flex-grow: 1;
+}
 
 .advertisment.banner {
   height: 70vh;
@@ -545,7 +665,6 @@ div#whatsnewList {
     display: flex;
     flex-flow: column;
     position: relative;
-    /* overflow: hidden; */
     width: 25%;
     border: 1px solid var(--accentColor);
     border-bottom-left-radius: 50px;
@@ -579,7 +698,7 @@ div#whatsnewList {
   text-align: justify;
   transition-property: transform;
   flex-grow: 1;
-  z-index: 1111222;
+  z-index: 4;
   position: relative;
 }
 
@@ -642,7 +761,7 @@ div#whatsnewList {
   justify-content: center;
   padding: 1vw 5vw !important;
   flex-wrap:wrap;
-  column-gap: 10%;
+  column-gap: 55px;
 }
 
 .ride_information > h2 {
@@ -654,7 +773,7 @@ div#whatsnewList {
 }
 
 .ride_information .ride_description{
- width: 59%;
+ width: 60%;
  text-align: justify;
  font-size: 16px;
  font-weight: 400;
@@ -662,16 +781,15 @@ div#whatsnewList {
 }
 
 .ride_information .ride_description .ride_ticket{
-  background: #d80000;
+  background: var(--color-one);
   text-align: center;
   width:150px;
   display: inline-block;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin: 20px 0px;
  }
  
  .ride_information .ride_description .ride_ticket p{
-  color: white;
+  color: var(--text-invert);
  }
 
 .ride_information .activity_data{
@@ -680,20 +798,40 @@ div#whatsnewList {
 }
 
 .ride_information .activity_data p, .ride_data p{
- padding:0 25%0       
+ padding: 0 25% 0;
 }
 .ride_information .activity_data ul, .ride_data ul {
   list-style: none;
   padding: 0;
 }
 
-.ride_information .activity_data ul li, .ride_data ul li {
-  margin-bottom:20px
+.ride_information .activity_data ul li {
+  margin-bottom:20px;
 }
 
 .ride_data h3{
   margin:0;
   padding:0;
+  width: 100%;
+  height: 48px;
+}
+
+ul.ridePopularity {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+
+ul.ridePopularity li > p {
+  float: left;
+  width: auto;
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
+.ride_data > p {
+  padding: 0;
 }
 
 #ride_one .banner {
@@ -756,6 +894,7 @@ div#whatsnewList {
  display: inline-block;
  margin: 2%;
  width: 18%;
+ border: 1px solid;
 }
 
 
@@ -778,6 +917,22 @@ transform:scale(1.1);
  
 }
 
+#restaurantOne {
+  background-image: url('/images/Page2/food_1.jpg');
+}
+
+#restaurantTwo {
+  background-image: url('/images/Page2/food_2.jpg');
+}
+
+#restaurantThree {
+  background-image: url('/images/Page2/food_3.jpg');
+}
+
+#restaurantFour {
+  background-image: url('/images/Page2/food_4.jpg');
+}
+
 /*Discover Page. Park Map & Table for Schedule of the Park*/
 
 
@@ -791,7 +946,7 @@ transform:scale(1.1);
   right: 10vw;
   /* padding: 20px 20px 40px; */
   background: #0006;
-  color: #fff;
+  color: var(--text-invert);
   width: auto;
   display: flex;
   justify-content: center;
@@ -803,14 +958,14 @@ transform:scale(1.1);
 }
 
 #map a {
-    background: #f44336;
+    background: var(--color-one);
     padding: 10px 20px; 
     flex: 1;
     text-align: center;
 }
 
 #map a:hover {
-    background: #ff5722;
+    background: var(--color-one);
 }
 #map .address {
   margin-bottom:0;
@@ -846,6 +1001,147 @@ thead > tr {
  text-align: left;
  text-transform: uppercase;
 }
+
+
+section#parkMap {
+  padding: 0;
+}
+
+section#timings {
+  margin-bottom: 60px;
+}
+
+th {
+  font-size: 15px;
+}
+
+div#hotelsListing {
+  display: flex;
+  justify-content: center;
+  flex-basis: fit-content;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  padding: 0 20px;
+}
+
+.hotel {flex-grow: 1;text-align: center;position: relative;overflow: hidden;}
+
+.hotel > .img {
+  min-height: 42vh;
+  width: 100%;
+  border:1px solid var(--accentColor);
+}
+
+.hotel .stars{
+  color: var(--golden);
+  position: absolute;
+  bottom: 41px;
+  float: left;
+  left: 0;
+  right: 0;
+  background: #0000005e;
+  padding: 10px;
+  text-align: right;
+}
+
+.hotel a {
+  width: Calc(100% - 2px);
+  position: absolute;
+  border-width: 1px !important;
+  padding: 10px 0;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 16px;
+  bottom: 0;
+  left: 0;
+}
+
+#hotelOne .img {
+background-image: url('/images/Page3/Hotels/Hotel_1.jpg');
+}
+#hotelTwo .img{
+background-image: url('/images/Page3/Hotels/Hotel_2.jpg');
+}
+#hotelThree .img{
+background-image: url('/images/Page3/Hotels/Hotel_3.jpg');
+}
+#hotelFour .img{
+background-image: url('/images/Page3/Hotels/Hotel_4.jpg');
+}
+
+#giftShops {
+  display: grid;
+  grid-template-columns: repeat(3,30vw);
+  grid-template-rows: 30vh 30vh;
+  padding: 10px 50px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#giftShops > .giftshop{
+  width:100%;
+  height:100%;  
+}
+
+#giftShops > .giftshop:nth-child(even) {grid-row-start: 2;grid-row-end: 2;}
+#giftShops > .giftshop:nth-child(n+4) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.giftshop.center {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.giftShopText {
+  padding: 0px 20px;
+  color:var(--text-invert);
+  z-index: 5;
+  position: absolute;
+}
+#giftShops .img
+{
+  position: relative;
+  filter: saturate(1.5);
+}
+
+#giftShops .img:before 
+{
+  content: '';
+  position: absolute;
+  background: linear-gradient(0deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 52%));
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  width:100%;
+  height:100%;
+  z-index:1;
+}
+
+#giftShops #giftShopOne.img {
+background-image: url('/images/Page3/GiftShop/GiftShop_1.jpg');
+/* filter: saturate(2); */
+}
+#giftShops #giftShopTwo.img {
+background-image: url('/images/Page3/GiftShop/GiftShop_2.jpg');
+}
+#giftShops #giftShopThree.img {
+background-image: url('/images/Page3/GiftShop/GhiftShop_3.jpg');
+
+}
+#giftShops #giftShopFour.img {
+background-image: url('/images/Page3/GiftShop/GiftShop_4.jpg');
+
+}
+#giftShops #giftShopFive.img {
+background-image: url('/images/Page3/GiftShop/GiftShop_5.jpg');
+
+}
 /*//////*/
 
 
@@ -862,7 +1158,7 @@ footer {
 }
 
 footer *{
- color:#fff;
+ color:var(--text-invert);
  padding-top: 0;
  margin-top: 0;
  
@@ -955,110 +1251,10 @@ footer #contactForm > div {
   grid-column-end: 3;
 }
 
-div#giftShops {
-    display: grid;
-    grid-template-columns: repeat(3,30vw);
-    grid-template-rows: 30vh 30vh;
-    padding: 10px 50px;
-    column-gap: 20px;
-    row-gap: 20px;
-}
-
-#giftShops > .giftshop{
-  width:100%;
-  height:100%;
-  background-size: cover;
-  background-position: center center;
-}
-
-#giftShops > .giftshop:nth-child(even) {grid-row-start: 2;grid-row-end: 2;}
-#giftShops > .giftshop:nth-child(n+4) {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-
-.giftshop.center {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.giftShopText {
-    padding: 20px;
-}
-
-section#parkMap {
-    padding: 0;
-}
-
-section#timings {
-    margin-bottom: 60px;
-}
-
-th {
-    font-size: 15px;
-}
-
-div#hotelsListing {
-    display: flex;
-    justify-content: space-around;
-    flex-basis: fit-content;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 60px;
-    padding: 0 20px;
-}
-
-.hotel {flex-grow: 1;text-align: center;}
-
-.hotelImage {
-    background: #979797;
-    min-height: 42vh;
-    width: 100%;
-}
-
-.hotel input[type="submit"] {
-    width: 100%;
-    border-radius: 0;
-    padding: 12px;
-    font-size: 26px;
-    margin-top: 20px;
-}
-
-header nav > ul li.current a {
-    color: #656565;
-}
-
-.bannerText h1 {
-    padding: 0;
-    margin: 0;
-    line-height: 80px;
-    font-size: 120px;
-    font-weight: 100;
-    font-family: 'Ozda', sans-serif;
-}
-
-header nav ul.submenu a {
-    color: #000;
-}
 
 
-header nav > ul > li.hasSubmenu:before {
-    content: "\f078";
-    position: absolute;
-    color: #fff;
-    right: -14px;
-    font-family: 'Font Awesome 5 Pro';
-    margin-top: 4px;
-    font-size: 12px;
-}
-
-.nopadding {
-    padding: 0 !important;
-}
-
-.nopadding h1 {
-    padding: 100px 0;
-    margin: 0;
+.restaurant h4 {
+    font-family: 'Freehand', cursive;
+    font-weight: 200;
+    font-size: 30px;
 }

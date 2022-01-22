@@ -9,44 +9,63 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <header>
+        <!-- Header Menu-->
+        <header aria-label="Header">
             <div id="logo">
                 <a href="Index.html">
-                    <img src="images/header/logo.png" alt="Theme park logo">
+                    <img src="images/header/logo.png" alt="Thrill Ventures logo">
                 </a>
-                <br/>
+                <br>
             </div>
-            <nav>
+            <nav aria-label="top navigation bar">
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li>
-                        <a href="Attractions.html">Attractions</a>
-                        <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                        <ul>
-                            <li><a href="Attractions.html#rides">Rides</a></li>
-                            <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                            <li><a href="Attractions.html#resturants">Resturants</a></li>
-                        </ul>
-                    </li>
                     <li>
                         <!-- the # href link is to prevent redirects since its the same page-->
-                        <a href="#">Discover</a>
-                        <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
-                        <ul>
-                            <li><a href="#map">Directions</a></li>
-                            <li><a href="#tmings">Schedule</a></li>
-                            <li><a href="#parkMap">Park Map</a></li>
-                            <li><a href="#hotels">Hotels</a></li>
-                            <li><a href="#giftShop">Gift Shop</a></li>
+                        <a href="Index.html" aria-label="Home page link">Home</a>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="Attractions.html" aria-label="Attraction page link">Attractions</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Attractions page section">
+                            <li>
+                                <a href="Attractions.html#rides" aria-label="Rides link">Rides</a>
+                            </li>
+                            <li>
+                                <a href="Attractions.html#liveShows" aria-label="Live shows">Live Shows</a>
+                            </li>
+                            <li>
+                                <a href="Attractions.html#resturants" aria-label="Restaurants link">Restaurants</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="Discover.html" aria-label="Discover the Park page link">Discover</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Discover page sections">
+                            <li>
+                                <a href="#map" aria-label="park directions section">Directions</a>
+                            </li>
+                            <li>
+                                <a href="#tmings" aria-label="Park schedule and timings">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#parkMap" aria-label="Park map link">Park Map</a>
+                            </li>
+                            <li>
+                                <a href="#hotels" aria-label="Hotels links">Hotels</a>
+                            </li>
+                            <li>
+                                <a href="#giftShop" aria-label="Gift shop link">Gift Shop</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
         <section id="map" class="topBanner">
-            <div class="banner" style="background-image: url('images/ParkLocation.png');"> 
+            <div class="banner" style="background-image: url('/Images/Page3/ParkLocation.png');"> 
                 <address>                    
                     <div class="address">
                         <span class="heading">Park Directions</span>
@@ -64,7 +83,7 @@
         <section id="timings">
             
             <div id="parkTimings" class="padded boxed">
-                <h1>Park Timings</h1>
+                <h3>Park Timings</h3>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                 </p>
@@ -91,7 +110,7 @@
                 </table>
             </div>
             <div id="liveShowTimings" class="padded boxed">
-                <h1>Live-Shows Timings</h1>
+                <h3>Live-Shows Timings</h3>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                 </p>
@@ -121,88 +140,98 @@
         </section>
         
         <section id="parkMap" class="banner">
-        <object type="image/svg+xml" data="images/ParkMap.svg">
+        <object type="image/svg+xml" data="/Images/Page3/ParkMap.svg">
 				<!-- fall back image where object tag is blocked -->
-				<img src="images/ParkMap.png" alt="Park Image non-interactive"/>
+				<img src="/Images/Page3/ParkMap.png" alt="Park Image non-interactive"/>
 			</object>
         </section>
         <section id="hotels" class="darkSection">
             <div class="center">
-                <h1>Hotels</h1>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                </p>
+                <h2>Hotels</h2>
+                <p>Do you want to stay for longer than a day in our amusement park?</p>
+                <p>We offer 4 fantastic 3-5 stars hotels where you and your family can stay and charge up for another wonderful day of discovering all our rides</p>
             </div>
             <div class="padded">
                 <div id="hotelsListing">
-                    <div class="hotel">
-                        <div class="hotelImage" style="background-image:url('images/hotel.png')">
+                    <div id="hotelOne" class="hotel color-one">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <input type="submit" value="Visit Site" />
+                        <a href="#" class="coloredButtonFilled btn">Play Palace</a>
                     </div>
-                    <!--- Copy 4 times-->
-                    <div class="hotel">
-                        <div class="hotelImage" style="background-image:url('images/hotel.png')">
+                    <div id="hotelTwo" class="hotel color-two">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <input type="submit" value="Visit Site" />
+                        <a href="#" class="coloredButtonFilled btn">Cozy Cabins</a>
                     </div>
-                    <div class="hotel">
-                        <div class="hotelImage" style="background-image:url('images/hotel.png')">
+                    <div id="hotelThree" class="hotel color-three">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <input type="submit" value="Visit Site" />
+                        <a href="#" class="coloredButtonFilled btn">New Star Hotel</a>
                     </div>
-                    <div class="hotel">
-                        <div class="hotelImage" style="background-image:url('images/hotel.png')">
+                    <div id="hotelFour" class="hotel color-four">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <input type="submit" value="Visit Site" />
+                        <a href="#" class="coloredButtonFilled btn">Hiltop Hilton</a>
                     </div>
                 </div>
             </div>
         </section>
         <section id="giftShop">
             <div class="center">
-                <h1>Gift Shop</h1>
+                <h2>Gift Shop</h2>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Something for that someone speacial, to comemorate a family trip, a momento to remember the laughs we shared 
                 </p>
             </div>
             
             <div id="giftShops" class="padded">
-                <div class="giftshop small" style="background-image:url('images/smallgiftshop.png')">
+                <div id="giftShopOne" class="giftshop small img">
                     <div class="giftShopText">
-                        <h3>
-                            Some Text
-                        </h3>
+                        <h4>Northpoint treats</h4>
                     </div>
                 </div>
                 <!--- Copy this -->
-                <div class="giftshop small" style="background-image:url('images/smallgiftshop.png')">
+                <div id="giftShopTwo" class="giftshop small img">
                     <div class="giftShopText">
-                        <h3>
-                            Some Text
-                        </h3>
+                        <h4>Flame Apparel</h4>
                     </div>
                 </div>
-                <div class="giftshop center"  style="background-image:url('images/Centergiftshop.png')">
+                <div id="giftShopThree" class="giftshop center img">
                     <div class="giftShopText">
-                        <h3>
-                            Some Text
-                        </h3>
+                        <h4>Wildflower momento</h4>
                     </div>
                 </div>
-                <div class="giftshop small" style="background-image:url('images/Centergiftshop.png')">
+                <div id="giftShopFour" class="giftshop small img">
                     <div class="giftShopText">
-                        <h3>
-                            Some Text
-                        </h3>
+                        <h4>RedStar Action</h4>
                     </div>
                 </div>
-                <div class="giftshop small" style="background-image:url('images/Centergiftshop.png')">
+                <div id="giftShopFive" class="giftshop small img">
                     <div class="giftShopText">
-                        <h3>
-                            Some Text
-                        </h3>
+                        <h4>Dream Catcher</h4>
                     </div>
                 </div>
             </div>
