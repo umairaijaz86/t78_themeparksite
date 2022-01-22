@@ -1,6 +1,6 @@
  /* General */
  @import url('http://fonts.cdnfonts.com/css/ozda');
- @import url('https://fonts.googleapis.com/css2?family=Freehand&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
  @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 
  :root {
@@ -942,6 +942,8 @@ ul.ridePopularity li > p {
   transition-duration: 500ms;
   transition-property: transform;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
 }
 
 .restaurantImage:hover {
@@ -1293,3 +1295,20 @@ footer #contactForm > div {
   grid-column-end: 3;
 }
 
+
+
+.restaurantText {
+    position: absolute;
+    color: var(--text-invert);
+    font-weight: 700;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #000000ad;
+    padding: 10px;
+    bottom: -82px;
+    transition-duration: 500ms;
+    transition-property: bottom;
+}
