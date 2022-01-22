@@ -313,6 +313,8 @@ body > section:first-of-type {
 
 #logo img {
   height: 60px;
+  transition-property: height;
+  transition-duration: 500ms;
 }
 
 header {
@@ -337,6 +339,15 @@ html:not([data-scroll='0']) header {
   box-shadow: 0 7px 4px 0 var(--shadow-color);
   top: 0px;
   border:none;
+}
+html:not([data-scroll='0']) header nav > ul > li{
+  padding: 10px 0;
+  transition-property: padding;
+  transition-duration: 500ms;
+}
+
+html:not([data-scroll='0']) #logo img {
+  height: 40px;
 }
 
 header nav {  
@@ -399,6 +410,8 @@ header nav > ul > li {
   padding: 20px 0;
   position: relative;
   width: max-content;
+  transition-property: padding;
+  transition-duration: 500ms;
 }
 header nav > ul > li.current{
     border-bottom: 2px solid #656565;
@@ -410,7 +423,7 @@ header nav > ul > li:hover ul{
 header nav ul.submenu
 {
   padding: 0 10px;
-  margin-top: 12px;
+  margin-top: 10px;
   width: auto;
   margin-left: 0;
   text-align: left;
@@ -468,7 +481,7 @@ header nav > ul > li ul > li {
 /* Index page*/
 
 #welcomeBanner {
-  background-image: url('/images/Page1/ParkBanner.jpg');
+  background-image: url('/videos/videoThumbnail.png');
 }
 #ticketsControl {
   margin: 0 12vw;
@@ -545,6 +558,7 @@ header nav > ul > li ul > li {
   display: flex;
   flex-flow: column;
   background: var(--backgroundColor);
+  position: RELATIVE;
 }
 
 .activity:hover {
@@ -578,7 +592,7 @@ header nav > ul > li ul > li {
   position: relative;
 }
 
-.activity > .img a{
+.activity  a{
       position: absolute;
     top: 0;
     bottom: 0;
@@ -842,15 +856,15 @@ ul.ridePopularity li > p {
   background-image: url('/images/Page2/03_Banner.jpg');
 }
 
+#ride_three .banner {
+  background-image: url('/images/Page2/05_Banner.jpg')
+}
+
 
 /* Live Show */
 
 #live_shows_info .liveshowItem {
   display: flex;
-  /* justify-content: center; */
-  /* column-gap: 40px; */
-  /* margin: 60px 0; */
-  /* flex-grow: 1; */
   align-items: center;
 }
 
@@ -861,6 +875,14 @@ ul.ridePopularity li > p {
     height: 50vh;
     width: 50%;
     flex-grow: 1;
+}
+
+#live_show_one .img {
+  background-image:url('/images/Page2/Live_show_1.jpg');
+}
+
+#live_show_two .img {
+  background-image:url('/images/Page2/Live_Show_2.jpg')
 }
 
 .Live_Show_text {
@@ -897,6 +919,11 @@ ul.ridePopularity li > p {
  border: 1px solid;
 }
 
+.restaurant h4 {
+  font-family: 'Freehand', cursive;
+  font-weight: 200;
+  font-size: 30px;
+}
 
 .restaurantImage {
   height: 290px;
@@ -938,6 +965,7 @@ transform:scale(1.1);
 
 #map .banner {
   position: relative;
+  background-image: url('/Images/Page3/ParkLocation.png');
 }
 
 #map address {
@@ -958,10 +986,14 @@ transform:scale(1.1);
 }
 
 #map a {
-    background: var(--color-one);
-    padding: 10px 20px; 
+    background: var(--color-three);
+    padding: 10px 20px;
     flex: 1;
     text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 #map a:hover {
@@ -970,11 +1002,14 @@ transform:scale(1.1);
 #map .address {
   margin-bottom:0;
   width: 100%;
+  font-style: normal;
+  text-align: right;
+  margin-right: 14px;
 }
 
 #map .address .heading {
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 table{
@@ -1251,10 +1286,3 @@ footer #contactForm > div {
   grid-column-end: 3;
 }
 
-
-
-.restaurant h4 {
-    font-family: 'Freehand', cursive;
-    font-weight: 200;
-    font-size: 30px;
-}
