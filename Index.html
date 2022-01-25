@@ -6,328 +6,494 @@
         <meta name="Description" content="Theam park website for Team project">
         <meta name="author" content="Team 78 Tutor group 9">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main.css"/>
+        <!-- Basic script for index page to allow css detection of scroll position-->
+        <script src="js/script.js"></script>
     </head>
     <body>
-        <header>
+        <!-- Header Menu-->
+        <header aria-label="Header">
             <div id="logo">
                 <a href="#">
-                    <img src="images/header/logo.png" alt="Theme park logo">
+                    <img src="images/header/logo.png" alt="Thrill Ventures logo">
                 </a>
-                <br/>
+                <br>
             </div>
-            <nav>
+            <nav aria-label="top navigation bar">
                 <ul>
                     <li>
                         <!-- the # href link is to prevent redirects since its the same page-->
-                        <a href="#">Home</a>
+                        <a href="#" aria-label="Home page link">Home</a>
                     </li>
-                    <li>
-                        <a href="Attractions.html">Attractions</a>
-                        <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                        <ul>
-                            <li><a href="Attractions.html#rides">Rides</a></li>
-                            <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                            <li><a href="Attractions.html#resturants">Resturants</a></li>
+                    <li class="hasSubmenu">
+                        <a href="attractions.html" aria-label="Attraction page link">Attractions</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Attraction Sections links" aria-label="Attractions page section">
+                            <li>
+                                <a href="attractions.html#rides" aria-label="Rides link">Rides</a>
+                            </li>
+                            <li>
+                                <a href="attractions.html#liveShows" aria-label="Live shows">Live Shows</a>
+                            </li>
+                            <li>
+                                <a href="attractions.html#restaurants" aria-label="Restaurants link">Restaurants</a>
+                            </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="Discover.html">Discover</a>
-                        <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                        <ul>
-                            <li><a href="Discover.html#map">Directions</a></li>
-                            <li><a href="Discover.html#tmings">Schedule</a></li>
-                            <li><a href="Discover.html#parkMap">Park Map</a></li>
-                            <li><a href="Discover.html#hotels">Hotels</a></li>
-                            <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                    <li class="hasSubmenu">
+                        <a href="discover.html" aria-label="Discover the Park page link">Discover</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Discover page sections">
+                            <li>
+                                <a href="discover.html#map" aria-label="park directions section">Directions</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#timings" aria-label="Park schedule and timings">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#parkMap" aria-label="Park map link" >Park Map</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#hotels" aria-label="Hotels links" >Hotels</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#giftShop" aria-label="Gift shop link">Gift Shop</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
+        <!-- Main video banner-->
         <section id="mainBanner" class="topBanner">
-           
-                    <div class="banner">
-                        <img src="images/TopBanner.png" alt = "banner" width = "100%">
-                    </div>
-             
-        </section>
-        <section id="ticketSearch">
-            
-                <center>
-                    <h1>Park Tickets and Offers</h1>
-                </center>
-                <div id="ticketsControl">                   
-                    <div id="tc_header">
-                        <ul>
-                            <li>Hotels</li>
-                            <li>Rides</li>
-                            <li>Deals</li>
-                        </ul>
-                    </div> 
-                    <div id="tc_main">
-                        <form action="" target="_blank" method="post">
-                            <div>
-                                <select name="type" id="type">
-                                    <option value="Hotels">Hotels</option>
-                                    <option value="Rides">Rides</option>
-                                    <option value="Deals">Deals</option>
-                                </select>
-                            </div>
-                            <div><input type="text" placeholder="Arrival" name="Arrival" id="arrival" required onfocus="(this.type='date')"
-                                onblur="(this.type='text')"></div>
-                            <div><input type="text" placeholder="Departure" name="Departure" id="departure" required onfocus="(this.type='date')"
-                                onblur="(this.type='text')"></div>
-                            <div>
-                                <select name="Persons" id="persons">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="10+">10+</option>
-                                    <option value="-1" Disabled selected>Persson</option>
-                                </select>
-                            </div>
-                            <div>
-                                <input type="submit" value="Book">
-                            </div>
-                        </form>
-                    </div>
+            <!-- The associated Background image in the css works as a fallback image-->
+            <div id="welcomeBanner" class="banner">
+                <!-- inline with the accessability standards the span is intended for the reader-->
+                <span role="img" aria-label="Video of people enjoying at the park"> </span>
+                <video autoplay="" muted="" loop="" id="bannerVideo">
+                    <source src="/videos/videobanner.mp4" type="video/mp4">
+                </video>
+                <div class="bannerText">
+                    <h4>The thrill seeker's paradise</h4>
+                    <h1>Thrill
+                        <br>
+                        Ventures</h1>
+                    <h4>The perfect hit for your adrenaline addiction</h4>
                 </div>
+            </div>
         </section>
-        <section id="activities">
-           <div id="activityList" class="padded">
-               <center>
-                    <h1>Activities</h1>
-               </center>
-               <div class="activity">
-                   <img src="images/ride.png" alt = "Ride 1">   
-                   <h3>Ride Title</h3>
-                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                   <div class = "ride_data">
-                    <h3>Ride stats:</h3>
+        <section id="ticketSearch" aria-label="section for booking hotels, rides or deals">
+            <div class="center">
+                <h3>Park Tickets and Offers</h3>
+            </div>
+            <div id="ticketsControl">
+                <div id="tc_header">
                     <ul>
-                        <li id="rs_parkLocation">
-                            <img src="images/icons/location.png" alt="thrillride">
-                            Thrillride
-                        </li>
-                        <li id="rs_heigth">
-                            <img src="images/icons/location.png" alt="height to ride icon">
-                            Height Ride
-                        </li>
-                        <li id="rs_thrillride">
-                            <img src="images/icons/location.png" alt="location">
-                            Location
-                        </li>
-                    </ul>
-                </div> 
-               </div>
-
-
-               <div class="activity">
-                   <img src="images/ride.png" alt = "Ride 2">  
-                   <h3>Ride Title</h3> 
-                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                   <div class = "ride_data">
-                    <h3>Ride stats:</h3>
-                    <ul>
-                        <li id="rs_parkLocation">
-                            <img src="images/icons/location.png" alt="thrillride">
-                            Thrillride
-                        </li>
-                        <li id="rs_heigth">
-                            <img src="images/icons/location.png" alt="height to ride icon">
-                            Height Ride
-                        </li>
-                        <li id="rs_thrillride">
-                            <img src="images/icons/location.png" alt="location">
-                            Location
-                        </li>
+                        <li>Hotels</li>
+                        <li>Rides</li>
+                        <li>Deals</li>
                     </ul>
                 </div>
+                <div id="tc_main">
+                    <!---This is kept blank since the form submits to no server side code or
+                    processes-->
+                    <form id="BookingForm" action="" target="_blank" method="post" aria-label="Form to book hotels or rides or deals">
+                        <div>
+                            <select name="type" id="type" aria-label="select boking type">
+                                <option value="Hotels">Hotels</option>
+                                <option value="Rides">Rides</option>
+                                <option value="Deals">Deals</option>
+                            </select>
+                        </div>
+                        <div><input
+                            type="text"
+                            placeholder="Arrival"
+                            name="Arrival"
+                            id="arrival"
+                            required=""
+                            aria-label="Input Arrival date"
+                            onfocus="(this.type='date')"
+                            onblur="(this.type='text')"></div>
+                        <div><input
+                            type="text"
+                            placeholder="Departure"
+                            name="Departure"
+                            id="departure"
+                            required=""
+                            aria-label="Input Departure date"
+                            onfocus="(this.type='date')"
+                            onblur="(this.type='text')"></div>
+                        <div>
+                            <!-- this is purposefully kept limited to allow a selection instead of a number
+                            input the intention is that 10+ would eventually be redirected to group ticket
+                            purchase -->
+                            <select name="Persons" id="persons" aria-label="Select number of persons 1 - 10 or 10 plus">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="10+">10+</option>
+                                <option value="-1" disabled="" selected="">Persons</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="submit" aria-label="submit booking form" value="Book">
+                        </div>
+                    </form>
                 </div>
-
-
-                <div class="activity">
-                    <img src="images/ride.png" alt = "Ride 3"> 
-                    <h3>Ride Title</h3>  
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <div class = "ride_data">
-                        <h3>Ride stats:</h3>
+            </div>
+        </section>
+        <section id="activities" class="darkSection" aria-label="section listing some activity categories">
+            <div class="center">
+                <h2>Activities</h2>
+                <p>
+                   Take a ride in one of our exciting rollercoasters, stay a while and enjoy the festivities 
+                </p>
+            </div>
+            <div id="activityList" class="padded" aria-label="some of our activity types">
+                <div id="activityOne" class="activity color-three">
+                    <div class="img">
+                        <!-- inline with the accessability standards the span is intended for the reader-->
+                        <span role="img" aria-label="image of the theme park with roller coasts"> </span>
+                        <!-- Linked to the attractions page ride using a dive with the image background-->
+                    </div>
+                    <h3 class="coloredText">
+                        Rides
+                    </h3>
+                    <p>Let's not forget what you came from, the rides!</p>
+                    <p>
+                        From tall and scary rollercoasters to fun and calm water rides, our theme park
+                        guarantees a thrilling and exciting experience for people from all ages through
+                        its wide variety of rides
+                    </p>
+                    <div class="activity_data coloredBackground lightText invertImages">
+                        <h3>Ride Information</h3>
                         <ul>
-                            <li id="rs_parkLocation">
-                                <img src="images/icons/location.png" alt="thrillride">
-                                Thrillride
+                            <li class="rs_parkLocation">
+                                <i class="fas fa-dragon" aria-label="ride types"></i>
+                                <p>Thrill rides, play areas, lagoon and arcade</p>
                             </li>
-                            <li id="rs_heigth">
-                                <img src="images/icons/location.png" alt="height to ride icon">
-                                Height Ride
+                            <li class="rs_heigth">
+                                <i class="fas fa-notes-medical" aria-label="safety requirement"></i>
+                                <p>4ft+ tall for thrill rides, no heart conditions, not pregnant</p>
                             </li>
-                            <li id="rs_thrillride">
-                                <img src="images/icons/location.png" alt="location">
-                                Location
+                            <li class="rs_thrillride">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>see the rides section for specifc location or checkout the park map</p>
                             </li>
                         </ul>
                     </div>
+                    <a href="attractions.html#ride_one" aria-label="link to the attractions page's rides section"></a>
                 </div>
-           </div>  
 
-        </section>
-        <section id="advertismentBanner" class="banner">
-            <div id="advertismentBanner">
-                <div class="ride_one">
-                    <div class="banner">
-                        <img src="images/advertismentBanner.png" alt = "banner" width = "100%">
+                <div id="activityTwo" class="activity color-two">
+                    <div class="img">
+                        <span role="img" aria-label="image of the theme park hotel with a pool"> </span>
+                       
                     </div>
+                    <h3 class="coloredText">Hotels</h3>
+                    <p>Do you want to stay for longer than a day in our amusement park?
+                    </p>
+                    <p>We offer 4 fantastic 3-5 stars hotels where you and your family can stay and
+                        charge up for another wonderful day of discovering all our rides</p>
+                    <div class="activity_data coloredBackground lightText invertImages">
+                        <h3>
+                            Hotel Information
+                        </h3>
+                        <ul>
+                            <li class="rs_parkLocation">
+                                <i class="fas fa-hotel" aria-label="hotel types"></i>
+                                <p>There are 4 hotels on park grounds ranging from 3 to 5 star with all amenities</p>
+                            </li>
+                            <li class="rs_heigth">
+                                <i class="fas fa-luggage-cart" aria-label="checkin requirement"></i>
+                                <p>All Bookings must be made in advance to ensure availability</p>
+                            </li>
+                            <li class="rs_thrillride">
+                                <i class="fas fa-map-marker-alt" aria-label="hotel location"></i>
+                                <p>Hotels are located at the tower street in the park</p>
+                            </li>
+                        </ul>
+                    </div>
+                     <a href="discover.html#hotels" aria-label="Link to Discover page's hotels section"></a>
+                </div>
+
+                <div id="activityThree" class="activity color-one">
+                    <div class="img">
+                        <span role="img" aria-label="image of the food courd with families enjoying"> </span>
+                    </div>
+                    <h3 class="coloredText">
+                        Restaurants
+                    </h3>
+                    <p>Hungry after a day of emotions and adrenaline?</p>
+                    <p>In our theme park you can get any type of meal, from fast food to a fancy dinner in the Bureau. Check the full list of restaurants here.</p>
+                    <div class="activity_data coloredBackground lightText invertImages">
+                        <h3>Restaurant information</h3>
+                        <ul>
+                            <li class="rs_parkLocation">
+                                <i class="fas fa-utensils" aria-label="Restaurant types"></i>
+                                <p>
+                                    We offer both fine dining and fast food restaurants, of course there are food stalls everywhere for your convenience
+                                </p>
+                            </li>
+                            <li class="rs_heigth">
+                                <i class="fas fa-leaf"></i>
+                                <p>All food items are locally sources and fresh, we cater for all dietary needs at all venues</p>
+                            </li>
+                            <li class="rs_thrillride">
+                                <i class="fas fa-map-marker-alt" aria-label="hotel location"></i>
+                                <p>All Restaurants are located at the farmland</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="attractions.html#restaurants" aria-label="Link to attractions page's resturant section"></a>
+                </div>
+            </div>
+
+        </section>
+        <section id="advertismentBanner" aria-label="advertisment banner section">
+            <div id="indexAdvert" class="advertisment banner">
+                <span role="img" aria-label="Video advertisment banner of a timelapse at the park"> </span>
+                <video autoplay="autoplay" muted="muted" loop="loop" id="bannerVideo">
+                    <source src="/videos/03.mp4" type="video/mp4">
+                </video>
+                <div class="bannerText">
+                    <h1>Don't miss
+                    </h1>
+                    <br/>
+                    <h1>the thrills</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="whatsnew" aria-label="News section">
+            <div class="center">
+                <h2>What's new</h2>
+                <p>
+                    Get to know the latest happenings at your favourite thrill zone, some amazing things have been happening and there is a lot more to come.
+                </p>
+            </div>
+            <div id="whatsnewList" class="padded" aria-label="News list">
+
+                <div id="newsOne" class="whatsnew color-two" aria-label="First News">
+                    <div class="img">
+                        <span role="img" aria-label="image of the live show stage"> </span>
+                    </div>
+                    <div class="whatsNewText">
+                        <h4 class="coloredText">The Lion King</h4>
+                        <p>A 1-hour long adaptation of one of Disney's classics, thrilling for both
+                            children and adults</p>
+                        <p>The series of live aerials, acrobatics, stunts, dancing, fire twirling, and
+                            character performances will keep you entertained and make this show
+                            unforgettable</p>
+                    </div>
+                    <details aria-label="further details">
+                        <summary class="coloredButton btn" aria-label="click to find out more about the lion king live show">Find out more</summary>
+                        <div class="coloredBackground">
+                            <p>With the highly talanted cast , this treat is highly reccomended for the entire family</p>
+                            <p>The show will open next seasons starting in the summer, the advance booking for tickets will begin from April for the entire seasons, so don't miss out</p>
+                            <p>if you are booking for a large group or special needs indaviduals or a school trip <br/> call the help center for information on your eligibelity of special discount</p>
+                        </div>
+                    </details>
+                </div>
+                <div id="newsTwo" class="whatsnew color-four" aria-label="Second News">
+                    <div class="img"></div>
+                    <div class="whatsNewText">
+                        <h4 class="coloredText">Discover our Ocean Friends</h4>
+                        <p>It's an all new presentation where you will explore the exciting world of
+                            bottlenose dolphins in a way you've never experienced before.</p>
+                        <p>So come over, the dolphins are looking forward to meet you!</p>
+                    </div>
+                    <details aria-label="further details">
+                        <summary class="coloredButton btn" aria-label="click to find out more about Our ocean friends">Find out more</summary>
+                        <div class="coloredBackground">
+                            <p>We invite all animal lovers to come and avail this opertunity to interact with one of the most inteligent mamals that we share this plant with</p>
+                            <p>Learn how dolphins see, hear , interact and respond under the guidance of profressional animal trainers.</p>
+                            <p>The interactive sessions are held every wednesday and friday</p>
+                            <p>if you are booking for a large group or special needs indaviduals or a school trip <br/> call the help center for information on your eligibelity of special discount</p>
+                        </div>
+                    </details>
+                </div>
+                <div id="newsThree" class="whatsnew color-three" aria-label="Third News">
+                    <div class="img"></div>
+                    <div class="whatsNewText">
+                        <h4 class="coloredText">Hotel California</h4>
+                        <p>The hotel California has just opened. A 5 star resort 10-minutes away from
+                            the theme park by bus</p>
+                        <p>The ammenities in the hotel include free hot breakfast, free WiFi, seasonal
+                            outdoor pool, gym and yoga classes, and business center.</p>
+                    </div>
+                    <details aria-label="further details">
+                        <summary class="coloredButton btn" aria-label="click to find out more about hotel california">Find out more</summary>
+                        <div class="coloredBackground">
+                            <p>One of our 5 star venues, allows you to stay at the park for and enjoy all the facilities and events in comfort</p>
+                            <p>Thrill venture parks also bost a 3 other venues with check them out in the hotels setion on the discover page.</p>
+                            <p>Call the help line or use the booking form to book in advance of your arrival to ensure availability</p>
+                        </div>
+                    </details>
+                </div>
+                <div id="newsFour" class="whatsnew color-one" aria-label="Fourth News">
+                    <div class="img"></div>
+                    <div class="whatsNewText">
+                        <h4 class="coloredText">The Krusty Burger</h4>
+                        <p>All the way from the Simpsons, the Krusty Burger will be landing soon at our park</p>
+                        <p>So look foward to enjoying the famous Krusty Burger along with a 'Fountain Beverage' or our vegan options in the Mother Nature Burger</p>
+                    </div>
+                    <details aria-label="further details">
+                        <summary class="coloredButton btn" aria-label="click to find out more bout Krusty burger">Find out more</summary>
+                        <div class="coloredBackground">
+                            <p> Get the simpsons experience and try out the Famous (or infamous) "100% Mamal milk" milkshake, </p>
+                            <p>Thrill ventures has partnered with the beloved simpsons fanchise so our patrons can enjoy the experience of springfiled </p>
+                            <p>The venue will feature food that is adaptable for the dietry needs and restrictoins of all our patrons</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
 
         </section>
 
-        <section id="whatsnew">
-            <div id="whatsnewList" class="padded">
-                <center>
-                     <h1>What's new</h1>
-                </center>
-                <div class="whatsnew">
-                    <img src="images/ride.png" alt = "Ride 1">   
-                    <h3>Ride Title</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                </div>
-                <div class="whatsnew">
-                    <img src="images/ride.png" alt = "Ride 2">  
-                    <h3>Ride Title</h3> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                 </div>
-                 <div class="whatsnew">
-                     <img src="images/ride.png" alt = "Ride 3"> 
-                     <h3>Ride Title</h3>  
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                 </div>
-                 <div class="whatsnew">
-                    <img src="images/ride.png" alt = "Ride 1">   
-                    <h3>Ride Title</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                </div>
-            </div> 
-
-        </section>
-
-        <footer>
+        <footer aria-label="Footer section">
             <div>
                 <div class="logo">
                     <a href="#">
-                        <img src="images/header/logo.png" alt="Theme park logo">
+                        <img src="images/footer/logo.png" alt="Thrill ventures logo">
                     </a>
                 </div>
-                <div id="#socialMedia">
-                    <ul id="#socialMediaLinks">
+                <div id="socialMedia">
+                    <ul id="socialMediaLinks" aria-label="Social media links">
                         <li>
-                            <a href="https://facebook.comc">
-                                <img src="images/footer/facebook.png" 
-                                    alt="theme park facebook page"
-                                    width="25px;">
+                            <a href="https://facebook.com"  target="_blank" aria-label="Facebook link">
+                                <img src="images/footer/facebook.png" alt="theme park facebook page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instragram.com">
-                                <img src="images/footer/instagram.png" 
-                                    alt="theme park instagram page"
-                                    width="25px;">
+                            <a href="https://instragram.com"  target="_blank" aria-label="instagram link">
+                                <img src="images/footer/instagram.png" alt="theme park instagram page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com">
-                                <img src="images/footer/twitter.png" 
-                                    alt="theme park twitter page"\
-                                    width="25px;">
+                            <a href="https://twitter.com"  target="_blank" aria-label="Twitter link">
+                                <img src="images/footer/twitter.png" alt="theme park twitter page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com">
-                                <img src="images/footer/linkedin.png" 
-                                    alt="theme park lined in page"
-                                    width="25px;">
+                            <a href="https://linkedin.com"  target="_blank" aria-label="linkedin link">
+                                <img src="images/footer/linkedin.png" alt="theme park lined in page"></a>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div id="navigation">
-                <h2>Navigation</h2>
-                <nav>
+                <h4>Navigation</h4>
+                <nav  aria-label="Footer navigatoin">
                     <ul>
-                        <li><a href="Index.html">Home</a></li>
                         <li>
-                            <a href="#">Attractions</a>
+                            <!-- the # href link is to prevent redirects since its the same page-->
+                            <a href="#" aria-label="Homepage link">Home</a>
+                        </li>
+                        <li>
+                            
+                            <a href="attractions.html" aria-label="Attractions page link">Attractions</a>
+                            <!-- Since its the same page , we dont need to redirect the relative internal
+                            links will work with a # href -->
                             <ul>
-                                <li><a href="Attractions.html#rides">Rides</a></li>
-                                <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                                <li><a href="Attractions.html#resturants">Resturants</a></li>
+                                <li>
+                                    <a href="attractions.html#rides" aria-label="link to rides section on Attractions page">Rides</a>
+                                </li>
+                                <li>
+                                    <a href="attractions.html#liveShows" aria-label="link to live shows seciton on Attractions page">Live Shows</a>
+                                </li>
+                                <li>
+                                    <a href="attractions.html#restaurants" aria-label="link to Restaurants section on Attractions page">Restaurants</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Discover</a>
+                            <a href="discover.html" aria-label="Discover the park page link">Discover</a>
+                            <!-- relative links on different page will scroll down to the relevant section
+                            that matches with the #id-->
                             <ul>
-                                <li><a href="Discover.html#map">Directions</a></li>
-                                <li><a href="Discover.html#tmings">Schedule</a></li>
-                                <li><a href="Discover.html#parkMap">Park Map</a></li>
-                                <li><a href="Discover.html#hotels">Hotels</a></li>
-                                <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                                <li>
+                                    <a href="discover.html#map" aria-label="link to directions section on the Discover page">Directions</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#timings" aria-label="link to sechdule section on the Discover page">Schedule</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#parkMap" aria-label="link to park map section on the Discover page">Park Map</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#hotels" aria-label="link to Hotels section on the Discover page">Hotels</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#giftShop" aria-label="link to giftshop section on the Discover page">Gift Shop</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div id="helpCenter">
-                <h2>Help Center</h2>
-                <address>
+                <h4>Help Center</h4>
+                <address aria-label="Park help center address">
                     <p>
-                        78 Creek Ave. <br/>
+                        78 Creek Ave.
+                        <br>
                         Key West, FL 33040
                     </p>
                     <p>
-                        <a href="tel:3865550111" >386-555-0111</a>
+                        <a href="tel:3865550111" aria-label="help center phone number, click to call">386-555-0111</a>
                     </p>
                 </address>
             </div>
             <div id="contactUs">
-                <!-- Self submit form , this will submit the information 
-                    on the same page and prevent redirects or errors on submit
-                 -->
-                <form id="contactForm">
+                <!-- Self submit form , this will submit the information on the same page and
+                prevent redirects or errors on submit -->
+                <form id="contactForm" aria-label="Contact us form">
                     <div>
-                        <input type="text" placeholder="Name" name="name" id="name" required>
+                        <input type="text" aria-label="input your Name,Required" placeholder="Name" name="name" id="name" required="">
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" name="email" id="email" required>
+                        <input type="email" aria-label="input your email, Required" placeholder="Email" name="email" id="email" required="">
                     </div>
                     <div>
-                        <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            aria-label="input contact subject or reason, required"
+                            name="subject"
+                            id="subject"
+                            required="">
                     </div>
                     <div>
-                        <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            aria-label="Input contact message required"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            required=""></textarea>
                     </div>
                     <div>
-                        <input type="submit" value="Contact us">
+                        <input type="submit" value="Contact us" aria-label="Submit contact form">
                     </div>
                 </form>
             </div>
             <div id="copyrights">
-                <p><hr></p>
-                <center>
-                    <p>&copy;Park Name, All rights reserved</p>
-                </center>
+                <hr>
+                <div class="center">
+                    <p>©Park Name, All rights reserved</p>
+                </div>
             </div>
         </footer>
     </body>

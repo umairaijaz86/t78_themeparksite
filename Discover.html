@@ -9,316 +9,367 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <header>
+        <!-- Header Menu-->
+        <header aria-label="Header">
             <div id="logo">
-                <a href="Index.html">
-                    <img src="images/header/logo.png" alt="Theme park logo">
+                <a href="index.html">
+                    <img src="images/header/logo.png" alt="Thrill Ventures logo">
                 </a>
-                <br/>
+                <br>
             </div>
-            <nav>
+            <nav aria-label="top navigation bar">
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li>
-                        <a href="Attractions.html">Attractions</a>
-                        <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                        <ul>
-                            <li><a href="Attractions.html#rides">Rides</a></li>
-                            <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                            <li><a href="Attractions.html#resturants">Resturants</a></li>
-                        </ul>
-                    </li>
                     <li>
                         <!-- the # href link is to prevent redirects since its the same page-->
-                        <a href="#">Discover</a>
-                        <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
-                        <ul>
-                            <li><a href="#map">Directions</a></li>
-                            <li><a href="#tmings">Schedule</a></li>
-                            <li><a href="#parkMap">Park Map</a></li>
-                            <li><a href="#hotels">Hotels</a></li>
-                            <li><a href="#giftShop">Gift Shop</a></li>
+                        <a href="index.html" aria-label="Home page link">Home</a>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="attractions.html" aria-label="Attraction page link">Attractions</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Attractions page section">
+                            <li>
+                                <a href="attractions.html#rides" aria-label="Rides link">Rides</a>
+                            </li>
+                            <li>
+                                <a href="attractions.html#liveShows" aria-label="Live shows">Live Shows</a>
+                            </li>
+                            <li>
+                                <a href="attractions.html#restaurants" aria-label="Restaurants link">Restaurants</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hasSubmenu">
+                        <!-- the # href link is to prevent redirects since its the same page-->
+                        <a href="#" aria-label="Discover the Park page link">Discover</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Discover page sections">
+                            <li>
+                                <a href="#map" aria-label="park directions section">Directions</a>
+                            </li>
+                            <li>
+                                <a href="#timings" aria-label="Park schedule and timings">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#parkMap" aria-label="Park map link">Park Map</a>
+                            </li>
+                            <li>
+                                <a href="#hotels" aria-label="Hotels links">Hotels</a>
+                            </li>
+                            <li>
+                                <a href="#giftShop" aria-label="Gift shop link">Gift Shop</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-        <section id="map">
-            <div class="container"> 
-                <figure>
-                    <img src="images/parkmap.png">
-                    <button class='btnClass1' type='button' onclick= 'window.open("https://goo.gl/maps/WSBFZ4BfVVT39HpC8");return false;' target="_blank" > Get Directions</button>
-                    <button class='btnClass2' type='button' onclick= "location.href = 
-                        'tel: 386-555-0111' "  >Call Us </button>
-                </figure>
+        <section id="map" class="topBanner">
+            <div class="banner">
+                <address>                    
+                    <div class="address">
+                        <span class="heading">Park Directions</span>
+                        <p>
+                            78 Creek Ave. <br/>
+                            Key West, FL 33040
+                        </p>
+                    </div>
+                    <a href="https://goo.gl/maps/WSBFZ4BfVVT39HpC8" target="_blank"> Get Directions</a>
+                    <a href="tel:3865550111">Call Us </a>
+                </address>
             </div>
         </section>
 
         <section id="timings">
-
-            <h2>Park Timings</h2>
-            <table>
-                 <thead>
-                     <tr>
-                        <th colspan="1">Days</th>
-                        <th colspan="1">Opening Hours</th>
-                        <th colspan="1">Closing Hours</th>
-                    </tr>
-                 </thead>
-                 <tbody>
-                     <tr>
-                         <td>MONDAY - THURSDAY</td>
-                         <td>8 AM</td>
-                         <td>7 PM</td>
-                    </tr>
-                     <tr>
-                      <td>FRIDAY - SUNDAY</td>
-                     <td> 8 AM </td>
-                     <td>9 PM</td>
-                     </tr> 
-                 </tbody>
-            </table>
-
-            &nbsp;
-             <h2>Live-Shows Timings</h2>
-             <table>
-                 <thead>
-                     <tr>
-                        <th colspan="1">Days</th>
-                        <th colspan="1">Opening Hours</th>
-                        <th colspan="1">Closing Hours</th>
-                    </tr>
-                 </thead>
-                 <tbody>
-                     <tr>
-                         <td>MONDAY - THURSDAY</td>
-                         <td>12 PM</td>
-                         <td>4 PM</td>
-                    </tr>
-                     <tr>
-                      <td>FRIDAY - SUNDAY</td>
-                     <td> 12 PM </td>
-                     <td>6 PM</td>
-                     </tr> 
-                 </tbody>
-            </table>
-
+            
+            <div id="parkTimings" class="padded boxed">
+                <h3>Park Timings</h3>
+                <p>
+                    The park is open through out the week, the timings do not take into account special or public holidays
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="1">Days</th>
+                            <th colspan="1">Opening Hours</th>
+                            <th colspan="1">Closing Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MONDAY - THURSDAY</td>
+                            <td>8 AM</td>
+                            <td>7 PM</td>
+                        </tr>
+                        <tr>
+                        <td>FRIDAY - SUNDAY</td>
+                        <td> 8 AM </td>
+                        <td>9 PM</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <div id="liveShowTimings" class="padded boxed">
+                <h3>Live-Shows Timings</h3>
+                <p>
+                    All show timings are standard for through out the week, any changes to the timings are updated in Whats new section on the home pagew
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="1">Days</th>
+                            <th colspan="1">Opening Hours</th>
+                            <th colspan="1">Closing Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MONDAY - THURSDAY</td>
+                            <td>12 PM</td>
+                            <td>4 PM</td>
+                        </tr>
+                        <tr>
+                        <td>FRIDAY - SUNDAY</td>
+                        <td> 12 PM </td>
+                        <td>6 PM</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
 
         </section>
         
         <section id="parkMap" class="banner">
-        <object type="image/svg+xml" data="images/ParkMap.svg">
+        <object type="image/svg+xml" data="/images/page3/locations/parkmap.svg">
 				<!-- fall back image where object tag is blocked -->
-				<img src="images/ParkMap.png" alt="Park Image non-interactive" width="100%" />
+				<img src="/images/page3/locations/parkmap.png" alt="Park Image non-interactive"/>
 			</object>
         </section>
         <section id="hotels" class="darkSection">
-            <center>
-                <h1>Hotels</h1>
-            </center>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            </p>
-            <div id="hotels">
-                <div class="hotel">
-                    <div class="hotelImage">
-                        <img src="images/hotel.png" />
-                    </div>
-                    <input type="submit" value="Visit Site" />
-                </div>
-                <!--- Copy 4 times-->
-                <div id="hotels">
-                <div class="hotel">
-                    <div class="hotelImage">
-                        <img src="images/hotel.png" />
-                    </div>
-                    <input type="submit" value="Visit Site" />
-                </div>
-                <div id="hotels">
-                    <div class="hotel">
-                        <div class="hotelImage">
-                            <img src="images/hotel.png" />
-                        </div>
-                        <input type="submit" value="Visit Site" />
-                    </div>
-                    <div id="hotels">
-                        <div class="hotel">
-                            <div class="hotelImage">
-                                <img src="images/hotel.png" />
-                            </div>
-                            <input type="submit" value="Visit Site" />
-                        </div>
+            <div class="center">
+                <h2>Hotels</h2>
+                <p>Do you want to stay for longer than a day in our amusement park?</p>
+                <p>We offer 4 fantastic 3-5 stars hotels where you and your family can stay and charge up for another wonderful day of discovering all our rides</p>
             </div>
-
+            <div class="padded">
+                <div id="hotelsListing">
+                    <div id="hotelOne" class="hotel color-one">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <a href="https://www.booking.com/" target="_blank" class="coloredButtonFilled btn">Play Palace</a>
+                    </div>
+                    <div id="hotelTwo" class="hotel color-two">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <a href="https://www.booking.com/" target="_blank" class="coloredButtonFilled btn">Cozy Cabins</a>
+                    </div>
+                    <div id="hotelThree" class="hotel color-three">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <a href="https://www.booking.com/" target="_blank" class="coloredButtonFilled btn">New Star Hotel</a>
+                    </div>
+                    <div id="hotelFour" class="hotel color-four">
+                        <div class="img">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <a href="https://www.booking.com/" target="_blank" class="coloredButtonFilled btn">Hotel California</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="giftShop">
-            <center>
-                <h1>Gift Shop</h1>
-            </center>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <div id="giftShops">
-                <div class="giftshop small">
+            <div class="center">
+                <h2>Gift Shop</h2>
+                <p>
+                    Something for that someone special, to commemorate a family trip, a momento to remember the laughs we shared 
+                </p>
+            </div>
+            
+            <div id="giftShops" class="padded">
+                <div id="giftShopOne" class="giftshop small img">
                     <div class="giftShopText">
-                        <p>
-                            Some Text
-                        </p>
+                        <h4>Northpoint treats</h4>
                     </div>
-                    <img src="images/smallgiftshop.png" />
                 </div>
                 <!--- Copy this -->
-                <div id="giftShops">
-                    <div class="giftshop small">
-                        <div class="giftShopText">
-                            <p>
-                                Some Text
-                            </p>
-                        </div>
-                        <img src="images/smallgiftshop.png" />
+                <div id="giftShopTwo" class="giftshop small img">
+                    <div class="giftShopText">
+                        <h4>Flame Apparel</h4>
                     </div>
-                    <div id="giftShops">
-                        <div class="giftshop small">
-                            <div class="giftShopText">
-                                <p>
-                                    Some Text
-                                </p>
-                            </div>
-                            <img src="images/smallgiftshop.png" />
-                        </div>
-                        <div id="giftShops">
-                            <div class="giftshop small">
-                                <div class="giftShopText">
-                                    <p>
-                                        Some Text
-                                    </p>
-                                </div>
-                                <img src="images/smallgiftshop.png" />
-                            </div>
-                            <div id="giftShops">
-                                <div class="giftshop center">
-                                    <div class="giftShopText">
-                                        <p>
-                                            Some Text
-                                        </p>
-                                    </div>
-                                    <img src="images/Centergiftshop.png" />
-                                </div>
+                </div>
+                <div id="giftShopThree" class="giftshop center img">
+                    <div class="giftShopText">
+                        <h4>Wildflower momento</h4>
+                    </div>
+                </div>
+                <div id="giftShopFour" class="giftshop small img">
+                    <div class="giftShopText">
+                        <h4>RedStar Action</h4>
+                    </div>
+                </div>
+                <div id="giftShopFive" class="giftshop small img">
+                    <div class="giftShopText">
+                        <h4>Dream Catcher</h4>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer>
+        <footer aria-label="Footer section">
             <div>
                 <div class="logo">
-                    <a href="Index.html">
-                        <img src="images/header/logo.png" alt="Theme park logo">
+                    <a href="index.html">
+                        <img src="images/footer/logo.png" alt="Thrill ventures logo">
                     </a>
                 </div>
-                <div id="#socialMedia">
-                    <ul id="#socialMediaLinks">
+                <div id="socialMedia">
+                    <ul id="socialMediaLinks" aria-label="Social media links">
                         <li>
-                            <a href="https://facebook.comc">
-                                <img src="images/footer/facebook.png" 
-                                    alt="theme park facebook page"
-                                    width="25px;">
+                            <a href="https://facebook.com"  target="_blank" aria-label="Facebook link">
+                                <img src="images/footer/facebook.png" alt="theme park facebook page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instragram.com">
-                                <img src="images/footer/instagram.png" 
-                                    alt="theme park instagram page"
-                                    width="25px;">
+                            <a href="https://instragram.com"  target="_blank" aria-label="instagram link">
+                                <img src="images/footer/instagram.png" alt="theme park instagram page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com">
-                                <img src="images/footer/twitter.png" 
-                                    alt="theme park twitter page"\
-                                    width="25px;">
+                            <a href="https://twitter.com"  target="_blank" aria-label="Twitter link">
+                                <img src="images/footer/twitter.png" alt="theme park twitter page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com">
-                                <img src="images/footer/linkedin.png" 
-                                    alt="theme park lined in page"
-                                    width="25px;">
+                            <a href="https://linkedin.com"  target="_blank" aria-label="linkedin link">
+                                <img src="images/footer/linkedin.png" alt="theme park lined in page"></a>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div id="navigation">
-                <h2>Navigation</h2>
-                <nav>
+                <h4>Navigation</h4>
+                <nav  aria-label="Footer navigatoin">
                     <ul>
-                        <li><a href="Index.html">Home</a></li>
                         <li>
-                            <a href="Attractions.html">Attractions</a>
-                            <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id
+                            <a href="index.html" aria-label="Homepage link">Home</a>
+                        </li>
+                        <li>
+                            <a href="attractions.html" aria-label="Attractions page link">Attractions</a>
+                            <!-- Since its the same page , we dont need to redirect the relative internal
+                            links will work with a # href -->
                             <ul>
-                                <li><a href="Attractions.html#rides">Rides</a></li>
-                                <li><a href="Attractions.html#liveShows">Live Shows</a></li>
-                                <li><a href="Attractions.html#resturants">Resturants</a></li>
+                                <li>
+                                    <a href="attractions.html#rides" aria-label="link to rides section on Attractions page">Rides</a>
+                                </li>
+                                <li>
+                                    <a href="attractions.html#liveShows" aria-label="link to live shows seciton on Attractions page">Live Shows</a>
+                                </li>
+                                <li>
+                                    <a href="attractions.html#restaurants" aria-label="link to Restaurants section on Attractions page">Restaurants</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <!-- the # href link is to prevent redirects since its the same page-->
-                            <a href="#">Discover</a>
-                            <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
+                            <a href="#" aria-label="Discover the park page link">Discover</a>
+                            <!-- relative links on different page will scroll down to the relevant section
+                            that matches with the #id-->
                             <ul>
-                                <li><a href="#map">Directions</a></li>
-                                <li><a href="#tmings">Schedule</a></li>
-                                <li><a href="#parkMap">Park Map</a></li>
-                                <li><a href="#hotels">Hotels</a></li>
-                                <li><a href="#giftShop">Gift Shop</a></li>
+                                <li>
+                                    <a href="#map" aria-label="link to directions section on the Discover page">Directions</a>
+                                </li>
+                                <li>
+                                    <a href="#timings" aria-label="link to sechdule section on the Discover page">Schedule</a>
+                                </li>
+                                <li>
+                                    <a href="#parkMap" aria-label="link to park map section on the Discover page">Park Map</a>
+                                </li>
+                                <li>
+                                    <a href="#hotels" aria-label="link to Hotels section on the Discover page">Hotels</a>
+                                </li>
+                                <li>
+                                    <a href="#giftShop" aria-label="link to giftshop section on the Discover page">Gift Shop</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div id="helpCenter">
-                <h2>Help Center</h2>
-                <address>
+                <h4>Help Center</h4>
+                <address aria-label="Park help center address">
                     <p>
-                        78 Creek Ave. <br/>
+                        78 Creek Ave.
+                        <br>
                         Key West, FL 33040
                     </p>
                     <p>
-                        <a href="tel:3865550111" >386-555-0111</a>
+                        <a href="tel:3865550111" aria-label="help center phone number, click to call">386-555-0111</a>
                     </p>
                 </address>
             </div>
             <div id="contactUs">
-                <!-- Self submit form , this will submit the information 
-                    on the same page and prevent redirects or errors on submit
-                 -->
-                <form id="contactForm">
+                <!-- Self submit form , this will submit the information on the same page and
+                prevent redirects or errors on submit -->
+                <form id="contactForm" aria-label="Contact us form">
                     <div>
-                        <input type="text" placeholder="Name" name="name" id="name" required>
+                        <input type="text" aria-label="input your Name,Required" placeholder="Name" name="name" id="name" required="">
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" name="email" id="email" required>
+                        <input type="email" aria-label="input your email, Required" placeholder="Email" name="email" id="email" required="">
                     </div>
                     <div>
-                        <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            aria-label="input contact subject or reason, required"
+                            name="subject"
+                            id="subject"
+                            required="">
                     </div>
                     <div>
-                        <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            aria-label="Input contact message required"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            required=""></textarea>
                     </div>
                     <div>
-                        <input type="submit" value="Contact us">
+                        <input type="submit" value="Contact us" aria-label="Submit contact form">
                     </div>
                 </form>
             </div>
             <div id="copyrights">
-                <p><hr></p>
-                <center>
-                    <p>&copy;Park Name, All rights reserved</p>
-                </center>
+                <hr>
+                <div class="center">
+                    <p>©Park Name, All rights reserved</p>
+                </div>
             </div>
         </footer>
     </body>

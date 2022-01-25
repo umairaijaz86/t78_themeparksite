@@ -6,373 +6,611 @@
         <meta name="Description" content="Theam park website for Team project">
         <meta name="author" content="Team 78 Tutor group 9">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
-        <header>
+        <!-- Header Menu-->
+        <header aria-label="Header">
             <div id="logo">
-                <a href="Index.html">
-                    <img src="images/header/logo.png" alt="Theme park logo">
+                <a href="index.html">
+                    <img src="images/header/logo.png" alt="Thrill Ventures logo">
                 </a>
-                <br/>
+                <br>
             </div>
-            <nav>
+            <nav aria-label="top navigation bar">
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
                     <li>
+                        <a href="index.html" aria-label="Home page link">Home</a>
+                    </li>
+                    <li class="hasSubmenu">
                         <!-- the # href link is to prevent redirects since its the same page-->
-                        <a href="#">Attractions</a>
-                        <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
-                        <ul>
-                            <li><a href="#rides">Rides</a></li>
-                            <li><a href="#liveShows">Live Shows</a></li>
-                            <li><a href="#resturants">Resturants</a></li>
+                        <a href="#" aria-label="Attraction page link">Attractions</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Attractions page section">
+                            <li>
+                                <a href="#rides" aria-label="Rides link">Rides</a>
+                            </li>
+                            <li>
+                                <a href="#liveShows" aria-label="Live shows">Live Shows</a>
+                            </li>
+                            <li>
+                                <a href="#restaurants" aria-label="Restaurants link">Restaurants</a>
+                            </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="Discover.html">Discover</a>
-                        <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
-                        <ul>
-                            <li><a href="Discover.html#map">Directions</a></li>
-                            <li><a href="Discover.html#tmings">Schedule</a></li>
-                            <li><a href="Discover.html#parkMap">Park Map</a></li>
-                            <li><a href="Discover.html#hotels">Hotels</a></li>
-                            <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                    <li class="hasSubmenu">
+                        <a href="discover.html" aria-label="Discover the Park page link">Discover</a>
+                        <!-- relative links on different page will scroll down to the relevant section
+                        that matches with the #id-->
+                        <ul class="submenu" aria-label="Discover page sections">
+                            <li>
+                                <a href="discover.html#map" aria-label="park directions section">Directions</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#timings" aria-label="Park schedule and timings">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#parkMap" aria-label="Park map link">Park Map</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#hotels" aria-label="Hotels links">Hotels</a>
+                            </li>
+                            <li>
+                                <a href="discover.html#giftShop" aria-label="Gift shop link">Gift Shop</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-       <section id="rides">
+        <section
+            id="rides"
+            class="darkSection"
+            aria-label="Rides section with list of roller coasters">
             <div id="rideList">
                 <div id="ride_one">
-                    <div class="banner">
-                        <img src="images/Banner.PNG" alt = "banner" width = "100%">
+                    <div class="banner rideBanner">
+                        <!-- inline with the accessability standards the span is intended for the reader-->
+                        <span
+                            role="img"
+                            aria-label="Banner for Roller coaster called the long way day, large roaller coaster image  with people enjoying"></span>
                     </div>
                     <div class="ride_information padded">
-                        <div class = "ride_description">
-                            <h1>Ride Title</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of
-                            scrambled it to make a type specimen book.</p>
-        
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been .
+                        <h2 aria-label="Rollercoaster name. The long way down">The Long way down</h2>
+                        <div class="ride_description" ara-label="Ride descirption">
+                            <p>
+                                This terrific looping roller coaster attraction is a perfect balance of
+                                anticipation and suspense, unbridled thrills and unmatched wonder - where you're
+                                constantly at the cusp of heading into an inversion and you wonder when will it
+                                happen?
                             </p>
-                            <div class="ride_ticket">
-                                <p>Ticket 26$</p>
-        
-                            </div>
-                        </div>
-        
-                        <div class = "ride_data">
-                            <h3>Ride stats:</h3>
-                            <ul>
-                                <li id="rs_parkLocation">
-                                    <img src="images/icons/location.png" alt="park location icon">
-                                    Park location
+
+                            <p>
+                                It is a matter of momentum that finally takes riders, seated face-to-face or
+                                back-to-back, looping full speed around the single circular track up to seven
+                                stories high, only to stop and suspend riders upside-down before reversing
+                                direction for more thrills and fun.
+                            </p>
+                            <ul class="ridePopularity">
+                                <li aria-label="rush level">
+                                    <p>Rush</p>
+                                    <p>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                    </p>
                                 </li>
-                                <li id="rs_maxSpeed">
-                                    <img src="images/icons/ridespeed.png" alt="ride speed icon">
-                                    Maximum Ride Speed
-                                </li>
-                                <li id="rs_heightLimit">
-                                    <img src="images/icons/heighttoride.png" alt="height to ride icon">
-                                    Height Limit to ride
-                                </li>
-                                <li id="rs_safeteyRequirement">
-                                    <img src="images/icons/safetey.png" alt="Safety icon">
-                                    Safety Requirements
+                                <li aria-label="popularity level">
+                                    <p>Popularity</p>
+                                    <p>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                    </p>
                                 </li>
                             </ul>
-        
-        
-        
-                        </div>    
-        
-        
+                            <div class="ride_ticket">
+                                <p>Ticket $25</p>
+                            </div>
+                        </div>
+
+                        <div class="ride_data">
+                            <h3>Stats</h3>
+                            <ul aria-label="ride statistics">
+                                <li aria-label="maximum speed">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <p>120 mph</p>
+                                </li>
+                                <li aria-label="height limit">
+                                    <i class="fas fa-arrows-alt-v" aria-label="Ride height"></i>
+                                    <p>418 ft</p>
+                                </li>
+                                <li aria-label="drop down">
+                                    <i class="fas fa-long-arrow-alt-down"></i>
+                                    <p>400ft</p>
+                                </li>
+                                <li aria-label="number Of Loops">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <p>3 Loops</p>
+                                </li>
+                                <li aria-label="wait time">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    <p>20 min</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-stopwatch" ></i>
+                                    <p>5 min</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt" aria-label="Ride location"></i>
+                                    <p>Katanga Canyon</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ride_data">
+                            <h3>Safety</h3>
+                            <p>this ride is not suitable for the following demographics</p>
+                            <ul aria-label="Safety requirements">
+                                <li>
+                                    <i class="fas fa-arrows-alt-v"></i>
+                                    <p>less than -4ft tall</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart-broken"></i>
+                                    <p>Heart conditions</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-tint"></i>
+                                    <p>High blood pressure</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-baby"></i>
+                                    <p>Pregnant individuals</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
- 
+
                 <div id="ride_two">
-                    <div class="banner">
-                        <img src="images/Banner.PNG" alt = "banner" width = "100%">
-        
+                    <div class="banner rideBanner">
+                        <span
+                            role="img"
+                            aria-label="Banner for Roller coaster called the double twist, two parallel roller coasters tracks twisting around each other"></span>
                     </div>
                     <div class="ride_information padded">
-                        <div class = "ride_description">
-                            <h1>Ride Title</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of
-                            scrambled it to make a type specimen book.</p>
-        
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been .
+                        <h2>Double Twist</h2>
+                        <div class="ride_description">
+                            <p>It's one thing to ride a wave with friends, and another thing to be the wave!
                             </p>
+                            <p>
+                                Step into the peaceful-looking chariot over a picturesque lagoon. But be warned,
+                                this ride will be anything but peaceful. Pile into our roaring carriage and try
+                                to catch your breath while we crank you up notch by notch, higher than the
+                                trees. Brace yourself for what's coming next - an ultra-steep drop down a
+                                60-foot drop with the twin rides screeching into g-force twists straight into the
+                                tunnel through the lagoon below you.
+                            </p>
+                            <ul class="ridePopularity">
+                                <li aria-label="rush level">
+                                    <p>Rush</p>
+                                    <p>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                    </p>
+                                </li>
+                                <li aria-label="popularity level">
+                                    <p>Popularity</p>
+                                    <p>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                    </p>
+                                </li>
+                            </ul>
                             <div class="ride_ticket">
-                                <p>Ticket 26$</p>
-        
+                                <p>Ticket $15</p>
                             </div>
                         </div>
-        
-                        <div class = "ride_data">
-                            <h3>Ride stats:</h3>
+
+                        <div class="ride_data">
+                            <h3>Stats</h3>
                             <ul>
-                                <li id="rs_parkLocation">
-                                    <img src="images/icons/location.png" alt="park location icon">
-                                    Park location
+                                <li aria-label="maxSpeed">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <p>100 mph</p>
                                 </li>
-                                <li id="rs_maxSpeed">
-                                    <img src="images/icons/ridespeed.png" alt="ride speed icon">
-                                    Maximum Ride Speed
+                                <li aria-label="height limit">
+                                    <i class="fas fa-arrows-alt-v" aria-label="Ride height"></i>
+                                    <p>250 ft</p>
                                 </li>
-                                <li id="rs_heightLimit">
-                                    <img src="images/icons/heighttoride.png" alt="height to ride icon">
-                                    Height Limit to ride
+                                <li aria-label="drop down">
+                                    <i class="fas fa-long-arrow-alt-down"></i>
+                                    <p>130 ft</p>
                                 </li>
-                                <li id="rs_safeteyRequirement">
-                                    <img src="images/icons/safetey.png" alt="Safety icon">
-                                    Safety Requirements
+                                <li aria-label="number Of Loops">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <p>3 Loops</p>
+                                </li>
+                                <li aria-label="wait time">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    <p>20 min</p>
+                                </li>
+                                <li class="">
+                                    <i class="fas fa-stopwatch"></i>
+                                    <p>5 min</p>
+                                </li>
+                                <li aria-label="park Location">
+                                    <i class="fas fa-map-marker-alt" aria-label="Ride location"></i>
+                                    <p>X-Sector</p>
                                 </li>
                             </ul>
                         </div>
-                    </div> 
+                        <div class="ride_data">
+                            <h3>Safety</h3>
+                            <p>this ride is not suitable for the following demographics</p>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-arrows-alt-v"></i>
+                                    <p>shorter than 2 ft</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-weight"></i>
+                                    <p>weigh less than 300 lbs</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart-broken"></i>
+                                    <p>Heart conditions</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-tint"></i>
+                                    <p>High blood pressure</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-baby"></i>
+                                    <p>Pregnant individuals</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div id="ride_three">
-                    <div class="banner">
-                        <img src="images/Banner.PNG" alt = "banner" width = "100%" >
-        
+                    <div class="banner rideBanner">
+
+                        <span
+                        role="img"
+                        aria-label="Banner for Roller coaster called the Inferno, Wooden rollercoaster exiting a woodden tunnle in the shape of a bull with fire effects"></span>
+
                     </div>
                     <div class="ride_information padded">
-                        <div class = "ride_description">
-                            <h1>Ride Title</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of
-                            scrambled it to make a type specimen book.</p>
-        
-                            <p>Lorem Ipsum is simply dummy text of the printing 
-                            and typesetting industry. Lorem Ipsum has been .
-                            </p>
-                            <div class="ride_ticket">
-                                <p>Ticket 26$</p>
-        
-                            </div>
-                        </div>
-        
-                        <div class = "ride_data">
-                            <h3>Ride stats:</h3>
-                            <ul>
-                                <li id="rs_parkLocation">
-                                    <img src="images/icons/location.png" alt="park location icon">
-                                    Park location
+                        <h2>The Inferno</h2>
+                        <div class="ride_description">
+                            <p>Grab a seat, but don't get too comfortable. This stunning 150-foot-tall wooden sculpture features a burning inferno with steep dives and twists at just the right rate to keep you guessing if it will make head long into the fire pit or fly off the rails. </p>
+
+                            <p>Don't be fooled by the beautiful craftmanship. You're about to march boldly into a flaming harth with the dried wood beneath your feet!</p>
+                            <ul class="ridePopularity">
+                                <li aria-label="rush level">
+                                    <p>Rush</p>
+                                    <p>
+                                        <i class="fas fa-syringe"></i>
+                                        <i class="fas fa-syringe"></i>
+                                    </p>
                                 </li>
-                                <li id="rs_maxSpeed">
-                                    <img src="images/icons/ridespeed.png" alt="ride speed icon">
-                                    Maximum Ride Speed
-                                </li>
-                                <li id="rs_heightLimit">
-                                    <img src="images/icons/heighttoride.png" alt="height to ride icon">
-                                    Height Limit to ride
-                                </li>
-                                <li id="rs_safeteyRequirement">
-                                    <img src="images/icons/safetey.png" alt="Safety icon">
-                                    Safety Requirements
+                                <li aria-label="popularity level">
+                                    <p>Popularity</p>
+                                    <p>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                        <i class="fas fa-fire"></i>
+                                    </p>
                                 </li>
                             </ul>
-                        </div>   
+                            <div class="ride_ticket">
+                                <p>Ticket $10</p>
+                            </div>
+                        </div>
+
+                        <div class="ride_data">
+                            <h3>Stats</h3>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-tachometer-alt"  aria-label="maxSpeed"></i>
+                                    <p>80 mph</p>
+                                </li>
+                                <li aria-label="height limit">
+                                    <i class="fas fa-arrows-alt-v" aria-label="Ride height"></i>
+                                    <p>130 ft</p>
+                                </li>
+                                <li aria-label="drop down">
+                                    <i class="fas fa-long-arrow-alt-down"></i>
+                                    <p>50 ft</p>
+                                </li>
+                                <li aria-label="number Of Loops">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <p>0 Loops</p>
+                                </li>
+                                <li aria-label="wait time">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    <p>15 min</p>
+                                </li>
+                                <li class="">
+                                    <i class="fas fa-stopwatch"></i>
+                                    <p>8 min</p>
+                                </li>
+                                <li aria-label="park Location">
+                                    <i class="fas fa-map-marker-alt" aria-label="Ride location"></i>
+                                    <p>Adventure Land</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ride_data">
+                            <h3>Safety</h3>
+                            <p>this ride is not suitable for the following demographics</p>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-arrows-alt-v"></i>
+                                    <p>more than +7ft tall</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart-broken"></i>
+                                    <p>Heart conditions</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                
                 </div>
             </div>
-       </section>
-       <section id="liveShows" class="darkSection">
-           <div id="live_shows_info" class="padded">
-                <center>
-                    <h1>Live Shows</h1>
-                </center>
-                <div id="live_show_one">
-                    <div class="Live_Show_image">
-                        <img src="images/Live_show_image.PNG" alt = "liveshow" width = "200px">   
-                    </div>
-                    <div class = "Live_Show_text">
-                        
-                        <h2>Loren Ipsum</h2>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                            
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
+        </section>
+        <section id="liveShows">
+            <div id="live_shows_info">
+                <div class="center">
+                    <h2>Live Shows</h2>
+                </div>
+                <div id="live_show_one" class="liveshowItem darkSection">
+                    <div class="img"></div>
+                    <div class="Live_Show_text">
+                        <h3>The Festival of the Lion King</h3>
+                        <p>
+                            The Festival of the Lion King is an uplifting celebration of Simba, the main
+                            character in Disney's classic film The Lion King. If you are a fan of The Lion
+                            King and its memorizing musical score - especially the 1994 Academy Awards
+                            winning song “Can You Feel The Love Tonight” - you don't want to miss this
+                            lively Broadway-style musical!</p>
 
+                        <p>Along with live performances of your favorite Lion King tunes, the show also
+                            features a fast-paced array of live aerials, acrobatics, stunts, dancing, fire
+                            twirling, and character performances. Audience participation is highly
+                            encouraged and the show is enjoyable for guests of all ages.</p>
+
+                        <p>The Festival of the Lion King takes place in the enchanting Harambe Village
+                            section of Animal Kingdom. Performances are conveniently scheduled at various
+                            times throughout the day. Advanced tickets are not required; simply get your
+                            spot in line about 30 minutes before the next showtime and you should be good to
+                            go.</p>
+                    </div>
 
                 </div>
-                <div id="live_show_two">
-                    <div class="Live_Show_image">
-                        <img src="images/Live_show_image.PNG" alt = "liveshow" width ="200px">   
-                    </div>
-                    <div class = "Live_Show_text">
-                        <h2>Loren Ipsum</h2>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                            
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
+                <div id="live_show_two" class="liveshowItem darkSection">
+                    <div class="img"></div>
+                    <div class="Live_Show_text">
+                        <h3>Discover Our Ocean Friends</h3>
+                        <p>
+                            Dolphins are mesmerizing for many reasons and some people often apply human
+                            characteristics to these intelligent and clever marine mammals because of the
+                            seemingly human qualities they exhibit. They are full of personality and very
+                            different from one another! In the Discover Our Ocean Friends educational
+                            demonstration show, observe the bond our bottlenose dolphins have with their
+                            Animal Care Specialists as they are taken through a variety of natural
+                            behaviors. And yes, when a dolphin doesn't feel like doing something, they don't
+                            have to!</p>
 
+                        <p>Get to know our dolphins and see how special they all are. The show takes
+                            place at Dolphin Harbor, the entrance of which is located to the right of the
+                            Main Plaza or at the top of the stairs from Oasis Plaza.</p>
+
+                        <p>Want to interact with our dolphins? Dolphin Discovery is an opportunity for
+                            you to interact in-water with these incredible animals. Special savings
+                            available.</p>
+                    </div>
 
                 </div>
-        
-        
-        </div>
 
-       </section>
-       <section id="restaurants">
-           <div id="resturantList" class="padded">
-               <center>
-                    <h1>Restaurants</h1>
-               </center>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-               <div class="restaurant">
-                   <img src="images/restaurant.PNG" alt = "PF changs Image ">   
-                   <h3>Restaurant name</h3>
-               </div>
-               <div class="restaurant">
-                   <img src="images/restaurant.PNG" alt = "Mcdonalds image">  
-                   <h3>Restaurant name</h3> 
+            </div>
+
+        </section>
+        <section id="restaurants">
+            <div class="center">
+                <h2>Restaurants</h2>
+                <p>Hungry after a day of emotions and adrenaline?</p>
+                <p>
+                    In our theme park you can get any type of meal, from fast food in the Krusty Burger to a fancy dinner in the Bureau. Check the full list of restaurants here.
+                </p>
+            </div>
+            <div id="resturantList" class="padded">
+                <div class="restaurant">
+                    <div
+                        id="restaurantOne"
+                        class="restaurantImage">
+                        <div class="restaurantText">
+                            Fine dining with a beautiful view of the lagoon
+                        </div>    
+                    </div>
+                    
+                    <h5>Vol de Nuitt</h5>
                 </div>
                 <div class="restaurant">
-                    <img src="images/restaurant.PNG" alt = "Local Random Resturant image"> 
-                    <h3>Restaurant name</h3>  
+                    <div
+                        id="restaurantTwo"
+                        class="restaurantImage">
+                        <div class="restaurantText">
+                            chilli dog, or a english muffin on the go, dealer's choice
+                        </div>    
+                    </div>
+                    <h5>Spotlight Bakery</h5>
                 </div>
                 <div class="restaurant">
-                    <img src="images/restaurant.PNG" alt = "Krepes and Popcorn stall image" >   
-                    <h3>Restaurant name</h3>
+                    <div
+                        id="restaurantThree"
+                        class="restaurantImage">
+                        <div class="restaurantText">
+                            The authentic taste of Roman pizza 
+                        </div>    
+                    </div>
+                    <h5>Pizza Roma</h5>
                 </div>
-           </div>
+                <div class="restaurant">
+                    <div
+                        id="restaurantFour"
+                        class="restaurantImage">
+                        <div class="restaurantText">
+                            The famous hard rock cafe, just like in hollywood
+                        </div>    
+                    </div>
+                    <h5>Hard Rock Cafe</h5>
+                </div>
+            </div>
 
-       </section>
-        <footer>
+        </section>
+        <footer aria-label="Footer section">
             <div>
                 <div class="logo">
-                    <a href="Index.html">
-                        <img src="images/header/logo.png" alt="Theme park logo">
+                    <a href="index.html">
+                        <img src="images/footer/logo.png" alt="Thrill ventures logo">
                     </a>
                 </div>
-                <div id="#socialMedia">
-                    <ul id="#socialMediaLinks">
+                <div id="socialMedia">
+                    <ul id="socialMediaLinks" aria-label="Social media links">
                         <li>
-                            <a href="https://facebook.comc">
-                                <img src="images/footer/facebook.png" 
-                                    alt="theme park facebook page"
-                                    width="25px;">
+                            <a href="https://facebook.com"  target="_blank" aria-label="Facebook link">
+                                <img src="images/footer/facebook.png" alt="theme park facebook page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instragram.com">
-                                <img src="images/footer/instagram.png" 
-                                    alt="theme park instagram page"
-                                    width="25px;">
+                            <a href="https://instragram.com"  target="_blank" aria-label="instagram link">
+                                <img src="images/footer/instagram.png" alt="theme park instagram page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com">
-                                <img src="images/footer/twitter.png" 
-                                    alt="theme park twitter page"\
-                                    width="25px;">
+                            <a href="https://twitter.com"  target="_blank" aria-label="Twitter link">
+                                <img src="images/footer/twitter.png" alt="theme park twitter page"></a>
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com">
-                                <img src="images/footer/linkedin.png" 
-                                    alt="theme park lined in page"
-                                    width="25px;">
+                            <a href="https://linkedin.com"  target="_blank" aria-label="linkedin link">
+                                <img src="images/footer/linkedin.png" alt="theme park lined in page"></a>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div id="navigation">
-                <h2>Navigation</h2>
-                <nav>
+                <h4>Navigation</h4>
+                <nav  aria-label="Footer navigatoin">
                     <ul>
-                        <li><a href="Index.html">Home</a></li>
+                        <li>
+                            <a href="index.html" aria-label="Homepage link">Home</a>
+                        </li>
                         <li>
                             <!-- the # href link is to prevent redirects since its the same page-->
-                            <a href="#">Attractions</a>
-                            <!-- Since its the same page , we dont need to redirect
-                        the relative internal links will work with a # href -->
+                            <a href="#" aria-label="Attractions page link">Attractions</a>
+                            <!-- Since its the same page , we dont need to redirect the relative internal
+                            links will work with a # href -->
                             <ul>
-                                <li><a href="#rides">Rides</a></li>
-                                <li><a href="#liveShows">Live Shows</a></li>
-                                <li><a href="#resturants">Resturants</a></li>
+                                <li>
+                                    <a href="#rides" aria-label="link to rides section on Attractions page">Rides</a>
+                                </li>
+                                <li>
+                                    <a href="#liveShows" aria-label="link to live shows seciton on Attractions page">Live Shows</a>
+                                </li>
+                                <li>
+                                    <a href="#restaurants" aria-label="link to Restaurants section on Attractions page">Restaurants</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="Discover.html">Discover</a>
-                            <!-- relative links on different page 
-                            will scroll down to the relevant section that matches with the #id-->
+                            <a href="discover.html" aria-label="Discover the park page link">Discover</a>
+                            <!-- relative links on different page will scroll down to the relevant section
+                            that matches with the #id-->
                             <ul>
-                                <li><a href="Discover.html#map">Directions</a></li>
-                                <li><a href="Discover.html#tmings">Schedule</a></li>
-                                <li><a href="Discover.html#parkMap">Park Map</a></li>
-                                <li><a href="Discover.html#hotels">Hotels</a></li>
-                                <li><a href="Discover.html#giftShop">Gift Shop</a></li>
+                                <li>
+                                    <a href="discover.html#map" aria-label="link to directions section on the Discover page">Directions</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#timings" aria-label="link to sechdule section on the Discover page">Schedule</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#parkMap" aria-label="link to park map section on the Discover page">Park Map</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#hotels" aria-label="link to Hotels section on the Discover page">Hotels</a>
+                                </li>
+                                <li>
+                                    <a href="discover.html#giftShop" aria-label="link to giftshop section on the Discover page">Gift Shop</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div id="helpCenter">
-                <h2>Help Center</h2>
-                <address>
+                <h4>Help Center</h4>
+                <address aria-label="Park help center address">
                     <p>
-                        78 Creek Ave. <br/>
+                        78 Creek Ave.
+                        <br>
                         Key West, FL 33040
                     </p>
                     <p>
-                        <a href="tel:3865550111" >386-555-0111</a>
+                        <a href="tel:3865550111" aria-label="help center phone number, click to call">386-555-0111</a>
                     </p>
                 </address>
             </div>
             <div id="contactUs">
-                <!-- Self submit form , this will submit the information 
-                    on the same page and prevent redirects or errors on submit
-                 -->
-                <form id="contactForm">
+                <!-- Self submit form , this will submit the information on the same page and
+                prevent redirects or errors on submit -->
+                <form id="contactForm" aria-label="Contact us form">
                     <div>
-                        <input type="text" placeholder="Name" name="name" id="name" required>
+                        <input type="text" aria-label="input your Name,Required" placeholder="Name" name="name" id="name" required="">
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" name="email" id="email" required>
+                        <input type="email" aria-label="input your email, Required" placeholder="Email" name="email" id="email" required="">
                     </div>
                     <div>
-                        <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            aria-label="input contact subject or reason, required"
+                            name="subject"
+                            id="subject"
+                            required="">
                     </div>
                     <div>
-                        <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            aria-label="Input contact message required"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            required=""></textarea>
                     </div>
                     <div>
-                        <input type="submit" value="Contact us">
+                        <input type="submit" value="Contact us" aria-label="Submit contact form">
                     </div>
                 </form>
             </div>
             <div id="copyrights">
-                <p><hr></p>
-                <center>
-                    <p>&copy;Park Name, All rights reserved</p>
-                </center>
+                <hr>
+                <div class="center">
+                    <p>©Park Name, All rights reserved</p>
+                </div>
             </div>
         </footer>
     </body>
