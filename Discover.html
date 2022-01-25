@@ -12,7 +12,7 @@
         <!-- Header Menu-->
         <header aria-label="Header">
             <div id="logo">
-                <a href="Index.html">
+                <a href="index.html">
                     <img src="images/header/logo.png" alt="Thrill Ventures logo">
                 </a>
                 <br>
@@ -21,26 +21,27 @@
                 <ul>
                     <li>
                         <!-- the # href link is to prevent redirects since its the same page-->
-                        <a href="Index.html" aria-label="Home page link">Home</a>
+                        <a href="index.html" aria-label="Home page link">Home</a>
                     </li>
                     <li class="hasSubmenu">
-                        <a href="Attractions.html" aria-label="Attraction page link">Attractions</a>
+                        <a href="attractions.html" aria-label="Attraction page link">Attractions</a>
                         <!-- relative links on different page will scroll down to the relevant section
                         that matches with the #id-->
                         <ul class="submenu" aria-label="Attractions page section">
                             <li>
-                                <a href="Attractions.html#rides" aria-label="Rides link">Rides</a>
+                                <a href="attractions.html#rides" aria-label="Rides link">Rides</a>
                             </li>
                             <li>
-                                <a href="Attractions.html#liveShows" aria-label="Live shows">Live Shows</a>
+                                <a href="attractions.html#liveShows" aria-label="Live shows">Live Shows</a>
                             </li>
                             <li>
-                                <a href="Attractions.html#restaurants" aria-label="Restaurants link">Restaurants</a>
+                                <a href="attractions.html#restaurants" aria-label="Restaurants link">Restaurants</a>
                             </li>
                         </ul>
                     </li>
                     <li class="hasSubmenu">
-                        <a href="Discover.html" aria-label="Discover the Park page link">Discover</a>
+                        <!-- the # href link is to prevent redirects since its the same page-->
+                        <a href="#" aria-label="Discover the Park page link">Discover</a>
                         <!-- relative links on different page will scroll down to the relevant section
                         that matches with the #id-->
                         <ul class="submenu" aria-label="Discover page sections">
@@ -48,7 +49,7 @@
                                 <a href="#map" aria-label="park directions section">Directions</a>
                             </li>
                             <li>
-                                <a href="#tmings" aria-label="Park schedule and timings">Schedule</a>
+                                <a href="#timings" aria-label="Park schedule and timings">Schedule</a>
                             </li>
                             <li>
                                 <a href="#parkMap" aria-label="Park map link">Park Map</a>
@@ -140,9 +141,9 @@
         </section>
         
         <section id="parkMap" class="banner">
-        <object type="image/svg+xml" data="/Images/Page3/Locations/ParkMap.svg">
+        <object type="image/svg+xml" data="/images/page3/locations/parkmap.svg">
 				<!-- fall back image where object tag is blocked -->
-				<img src="/Images/Page3/Locations/ParkMap.png" alt="Park Image non-interactive"/>
+				<img src="/images/page3/locations/parkmap.png" alt="Park Image non-interactive"/>
 			</object>
         </section>
         <section id="hotels" class="darkSection">
@@ -239,7 +240,7 @@
         <footer aria-label="Footer section">
             <div>
                 <div class="logo">
-                    <a href="Index.html">
+                    <a href="index.html">
                         <img src="images/footer/logo.png" alt="Thrill ventures logo">
                     </a>
                 </div>
@@ -273,44 +274,44 @@
                 <nav  aria-label="Footer navigatoin">
                     <ul>
                         <li>
-                            <a href="Index.html" aria-label="Homepage link"></a>Home</a>
+                            <a href="index.html" aria-label="Homepage link">Home</a>
                         </li>
                         <li>
-                            <!-- the # href link is to prevent redirects since its the same page-->
-                            <a href="#" aria-label="Attractions page link"></a>Attractions</a>
+                            <a href="attractions.html" aria-label="Attractions page link">Attractions</a>
                             <!-- Since its the same page , we dont need to redirect the relative internal
                             links will work with a # href -->
                             <ul>
                                 <li>
-                                    <a href="Attractions.html#rides" aria-label="link to rides section on Attractions page"></a>Rides</a>
+                                    <a href="attractions.html#rides" aria-label="link to rides section on Attractions page">Rides</a>
                                 </li>
                                 <li>
-                                    <a href="Attractions.html#liveShows" aria-label="link to live shows seciton on Attractions page"></a>Live Shows</a>
+                                    <a href="attractions.html#liveShows" aria-label="link to live shows seciton on Attractions page">Live Shows</a>
                                 </li>
                                 <li>
-                                    <a href="Attractions.html#restaurants" aria-label="link to Restaurants section on Attractions page"></a>Restaurants</a>
+                                    <a href="attractions.html#restaurants" aria-label="link to Restaurants section on Attractions page">Restaurants</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="Discover.html" aria-label="Discover the park page link">Discover</a>
+                            <!-- the # href link is to prevent redirects since its the same page-->
+                            <a href="#" aria-label="Discover the park page link">Discover</a>
                             <!-- relative links on different page will scroll down to the relevant section
                             that matches with the #id-->
                             <ul>
                                 <li>
-                                    <a href="Discover.html#map" aria-label="link to directions section on the Discover page">Directions</a>
+                                    <a href="#map" aria-label="link to directions section on the Discover page">Directions</a>
                                 </li>
                                 <li>
-                                    <a href="Discover.html#tmings" aria-label="link to sechdule section on the Discover page">Schedule</a>
+                                    <a href="#timings" aria-label="link to sechdule section on the Discover page">Schedule</a>
                                 </li>
                                 <li>
-                                    <a href="Discover.html#parkMap" aria-label="link to park map section on the Discover page">Park Map</a>
+                                    <a href="#parkMap" aria-label="link to park map section on the Discover page">Park Map</a>
                                 </li>
                                 <li>
-                                    <a href="Discover.html#hotels" aria-label="link to Hotels section on the Discover page">Hotels</a>
+                                    <a href="#hotels" aria-label="link to Hotels section on the Discover page">Hotels</a>
                                 </li>
                                 <li>
-                                    <a href="Discover.html#giftShop" aria-label="link to giftshop section on the Discover page">Gift Shop</a>
+                                    <a href="#giftShop" aria-label="link to giftshop section on the Discover page">Gift Shop</a>
                                 </li>
                             </ul>
                         </li>

@@ -1,5 +1,5 @@
  /* General */
- @import url('http://fonts.cdnfonts.com/css/ozda');
+ @import url('https://fonts.cdnfonts.com/css/ozda');
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
  @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 
@@ -481,7 +481,7 @@ header nav > ul > li ul > li {
 /* Index page*/
 
 #welcomeBanner {
-  background-image: url('/videos/videoThumbnail.png');
+  background-image: url('/videos/videothumbnail.png');
 }
 #ticketsControl {
   margin: 0 12vw;
@@ -574,15 +574,15 @@ header nav > ul > li ul > li {
 }
 
 #activityOne .img {
-  background-image: url('/images/Page1/Activities/Rides.jpg');
+  background-image: url('/images/page1/activities/rides.jpg');
 }
 
 #activityTwo .img{
-  background-image: url('/images/Page1/Activities/Hotels.jpg');
+  background-image: url('/images/page1/activities/hotels.jpg');
 }
 
 #activityThree .img {
-  background-image: url('/images/Page1/Activities/Restaurants.jpg');
+  background-image: url('/images/page1/activities/restaurants.jpg');
 }
 
 
@@ -749,16 +749,16 @@ div#whatsnewList {
     margin-bottom: 19px;
 }
 #newsOne .img {
-  background: url('/images/Page1/WhatsNew/Live_show_1.jpg');
+  background: url('/images/page1/whatsnew/live_show_1.jpg');
 }
 #newsTwo .img {
-  background: url('/images/Page1/WhatsNew/Live_Show_2.jpg');
+  background: url('/images/page1/whatsnew/live_show_2.jpg');
 }
 #newsThree .img {
-  background: url('/images/Page1/WhatsNew/New_hotel.jpg');
+  background: url('/images/page1/whatsnew/new_hotel.jpg');
 }
 #newsFour .img {
-  background: url('/images/Page1/WhatsNew/New_restaurant.jpg');
+  background: url('/images/page1/whatsnew/new_restaurant.jpg');
 }
 /* Attractions page */
 
@@ -853,15 +853,15 @@ ul.ridePopularity li > p {
 }
 
 #ride_one .banner {
-  background-image: url('/images/Page2/Rides/02_Banner.jpg');
+  background-image: url('/images/page2/rides/02_banner.jpg');
 }
 
 #ride_two .banner {
-  background-image: url('/images/Page2/Rides/03_Banner.jpg');
+  background-image: url('/images/page2/rides/03_banner.jpg');
 }
 
 #ride_three .banner {
-  background-image: url('/images/Page2/Rides/05_Banner.jpg')
+  background-image: url('/images/page2/rides/05_banner.jpg')
 }
 
 
@@ -886,11 +886,11 @@ ul.ridePopularity li > p {
 }
 
 #live_show_one .img {
-  background-image:url('/images/Page2/Liveshow/Live_show_1.jpg');
+  background-image:url('/images/page2/liveshow/live_show_1.jpg');
 }
 
 #live_show_two .img {
-  background-image:url('/images/Page2/Liveshow/Live_Show_2.jpg')
+  background-image:url('/images/page2/liveshow/live_show_2.jpg')
 }
 
 .Live_Show_text {
@@ -976,19 +976,19 @@ transform:scale(1.1);
 }
 
 #restaurantOne {
-  background-image: url('/images/Page2/Restaurants/food_1.jpg');
+  background-image: url('/images/page2/restaurants/food_1.jpg');
 }
 
 #restaurantTwo {
-  background-image: url('/images/Page2/Restaurants/food_2.jpg');
+  background-image: url('/images/page2/restaurants/food_2.jpg');
 }
 
 #restaurantThree {
-  background-image: url('/images/Page2/Restaurants/food_3.jpg');
+  background-image: url('/images/page2/restaurants/food_3.jpg');
 }
 
 #restaurantFour {
-  background-image: url('/images/Page2/Restaurants/food_4.jpg');
+  background-image: url('/images/page2/restaurants/food_4.jpg');
 }
 
 /*Discover Page. Park Map & Table for Schedule of the Park*/
@@ -996,7 +996,7 @@ transform:scale(1.1);
 
 #map .banner {
   position: relative;
-  background-image: url('/Images/Page3/Locations/ParkLocation.png');
+  background-image: url('/images/page3/locations/parklocation.png');
 }
 
 #map address {
@@ -1124,16 +1124,16 @@ div#hotelsListing {
 }
 
 #hotelOne .img {
-background-image: url('/images/Page3/Hotels/Hotel_1.jpg');
+background-image: url('/images/page3/hotels/hotel_1.jpg');
 }
 #hotelTwo .img{
-background-image: url('/images/Page3/Hotels/Hotel_2.jpg');
+background-image: url('/images/page3/hotels/hotel_2.jpg');
 }
 #hotelThree .img{
-background-image: url('/images/Page3/Hotels/Hotel_3.jpg');
+background-image: url('/images/page3/hotels/hotel_3.jpg');
 }
 #hotelFour .img{
-background-image: url('/images/Page3/Hotels/Hotel_4.jpg');
+background-image: url('/images/page3/hotels/hotel_4.jpg');
 }
 
 #giftShops {
@@ -1190,22 +1190,22 @@ background-image: url('/images/Page3/Hotels/Hotel_4.jpg');
 }
 
 #giftShops #giftShopOne.img {
-background-image: url('/images/Page3/GiftShop/GiftShop_1.jpg');
+background-image: url('/images/page3/giftshop/giftshop_1.jpg');
 /* filter: saturate(2); */
 }
 #giftShops #giftShopTwo.img {
-background-image: url('/images/Page3/GiftShop/GiftShop_2.jpg');
+background-image: url('/images/page3/giftshop/giftshop_2.jpg');
 }
 #giftShops #giftShopThree.img {
-background-image: url('/images/Page3/GiftShop/GhiftShop_3.jpg');
+background-image: url('/images/page3/giftshop/ghiftshop_3.jpg');
 
 }
 #giftShops #giftShopFour.img {
-background-image: url('/images/Page3/GiftShop/GiftShop_4.jpg');
+background-image: url('/images/page3/giftshop/giftshop_4.jpg');
 
 }
 #giftShops #giftShopFive.img {
-background-image: url('/images/Page3/GiftShop/GiftShop_5.jpg');
+background-image: url('/images/page3/giftshop/giftshop_5.jpg');
 
 }
 /*//////*/
@@ -1213,7 +1213,7 @@ background-image: url('/images/Page3/GiftShop/GiftShop_5.jpg');
 
 /* Footer */
 footer {
-  background: linear-gradient(0deg, rgb(0 0 0 / 80%), rgb(0 0 0 / 99%)),url(/Images/Footer/footerBackground.jpg)  center center;
+  background: linear-gradient(0deg, rgb(0 0 0 / 80%), rgb(0 0 0 / 99%)),url('/images/footer/footerbackground.jpg')  center center;
   padding: 30px 6vw 0;
   display: flex;
   flex-wrap: wrap;
